@@ -19,8 +19,8 @@ class Panel {
   rightZone = ".lsf-sidepanels__wrapper_align_right";
 
   collapsingToggle = ".lsf-panel__toggle";
-  collapseButton = `${this.collapsingToggle}[data-tooltip*="Collapse"]`;
-  expandButton = `${this.collapsingToggle}[data-tooltip*="Expand"]`;
+  collapseButton = `${this.collapsingToggle}[data-tooltip*="收起"]`;
+  expandButton = `${this.collapsingToggle}[data-tooltip*="展开"]`;
 
   resizeTopLeft = '[data-resize="top-left"]';
   resizeTopRight = '[data-resize="top-right"]';

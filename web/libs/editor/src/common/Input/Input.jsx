@@ -16,7 +16,7 @@ const Input = forwardRef(({ label, className, required, labelProps, ghost, waiti
   }, [props, ref, classList, waiting]);
 
   return label ? (
-    <Label {...(labelProps ?? {})} text={label} required={required}>
+    <Label{...(labelProps ?? {})} text={label} required={required}>
       {input}
     </Label>
   ) : (

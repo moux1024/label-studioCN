@@ -25,7 +25,7 @@ export const FramesControl: FC<TimelineSideControlProps> = ({ position = 0, leng
         />
       ) : (
         <>
-          {clamp(Math.round(position + 1), 1, duration + 1)} <span>of {duration + 1}</span>
+          {clamp(Math.round(position + 1), 1, duration + 1)} <span>共 {duration + 1}</span>
         </>
       )}
     </div>
@@ -39,7 +39,7 @@ interface FrameInputProps {
   onFinishEditing: () => void;
 }
 
-const allowedKeys = ["ArrowUp", "ArrowDown", "Backspace", "Delete", "Enter", /[0-9]/];
+const allowedKeys = ["ArrowUp", "ArrowDown", "Backspace", "删除", "Enter", /[0-9]/];
 
 const FrameInput: FC<FrameInputProps> = ({ length, position, onChange, onFinishEditing }) => {
   const input = useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>;

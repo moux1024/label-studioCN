@@ -1,7 +1,7 @@
 export const simpleTextConfig = `<View>
     <Text name="text" value="$text" />
     <Labels name="label" toName="text">
-      <Label value="Label" />
+      <Label value="标签" />
     </Labels>
   </View>`;
 
@@ -19,7 +19,7 @@ export const simpleTextResult = [
       start: 6,
       end: 11,
       text: "world",
-      labels: ["Label"],
+      labels: ["标签"],
     },
   },
   {
@@ -31,7 +31,7 @@ export const simpleTextResult = [
       start: 0,
       end: 5,
       text: "Hello",
-      labels: ["Label"],
+      labels: ["标签"],
     },
   },
 ];

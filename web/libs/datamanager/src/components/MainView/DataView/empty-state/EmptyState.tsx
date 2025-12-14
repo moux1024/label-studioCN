@@ -316,9 +316,7 @@ export const EmptyState: FC<EmptyStateProps> = ({
             className="flex-1"
             onClick={onOpenImportModal}
             data-testid="dm-import-button"
-          >
-            Import
-          </Button>
+          >导入</Button>
         )}
       </>
     ),

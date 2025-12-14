@@ -94,7 +94,7 @@ class App extends Component {
         }}
       >
         <Result status="success" title={getEnv(this.props.store).messages.NO_NEXT_TASK} />
-        <div className={cn("sub__result").toClassName()}>All tasks in the queue have been completed</div>
+        <div className={cn("sub__result").toClassName()}>全部 tasks in the queue have been completed</div>
         {store.taskHistory.length > 0 && (
           <Button
             onClick={(e) => store.prevTask(e, true)}
@@ -124,7 +124,7 @@ class App extends Component {
           <TreeValidation errors={this.props.store.annotationStore.validation} />
         </div>
         {!isFF(FF_DEV_3873) && store.hasInterface("infobar") && (
-          <div className={cn("main-view").elem("infobar").toClassName()}>Task #{store.task.id}</div>
+          <div className={cn("main-view").elem("infobar").toClassName()}>任务 #{store.task.id}</div>
         )}
       </div>
     );
@@ -160,7 +160,7 @@ class App extends Component {
 
     return (
       <Space className={cn("main-view").elem("infobar").toClassName()} size="small">
-        <span>Task #{id}</span>
+        <span>任务 #{id}</span>
 
         {queue && <span>{queue}</span>}
       </Space>

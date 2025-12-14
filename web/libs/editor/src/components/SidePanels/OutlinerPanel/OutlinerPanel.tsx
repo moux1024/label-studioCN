@@ -127,7 +127,7 @@ const OutlinerTreeComponent: FC<OutlinerTreeComponentProps> = observer(({ region
       {allRegionsHidden ? (
         <div className={cn("filters-info").toClassName()}>
           <IconInfo width={21} height={20} />
-          <div className={cn("filters-info").elem("filters-title").toClassName()}>All regions hidden</div>
+          <div className={cn("filters-info").elem("filters-title").toClassName()}>全部 regions hidden</div>
           <div className={cn("filters-info").elem("filters-description").toClassName()}>
             Adjust or remove the filters to view
           </div>

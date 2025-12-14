@@ -48,7 +48,7 @@ export const FilterValueType = types.union({
     if (!isDefined(sn)) return FilterValue;
     if (sn.$treenode) return sn.$treenode.type;
 
-    if (hasProperties(sn, ["items"])) {
+    if (hasProperties(sn, ["项"])) {
       return FilterValueList;
     }
     if (hasProperties(sn, ["min", "max"])) {

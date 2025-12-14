@@ -61,9 +61,7 @@ export default observer(({ store }) => {
           onClick={() => {
             history && history.reset();
           }}
-        >
-          Reset
-        </Button>
+        >重置</Button>
         {store.setPrelabeling && (
           <Button
             variant="neutral"

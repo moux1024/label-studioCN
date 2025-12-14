@@ -33,8 +33,8 @@ export const EditingHistory = observer(({ entity }) => {
       <Button
         look="string"
         variant="negative"
-        aria-label="Reset"
-        tooltip="Reset"
+        aria-label="重置"
+        tooltip="重置"
         className="!p-0"
         disabled={!history?.canUndo}
         onClick={() => history?.reset()}

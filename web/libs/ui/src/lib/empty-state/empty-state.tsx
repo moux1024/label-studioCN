@@ -132,7 +132,7 @@ export interface EmptyStateProps extends React.HTMLAttributes<HTMLDivElement> {
  *   title="Import your data"
  *   description="Choose a dataset from your computer to get started"
  *   actions={
- *     <Button onClick={onImport}>Import Data</Button>
+ *     <Button onClick={onImport}>导入 Data</Button>
  *   }
  * />
  * ```

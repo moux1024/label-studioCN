@@ -6,7 +6,7 @@ import { default as Label } from "../Label/Label";
 import "./Counter.scss";
 import { IconMinus, IconPlus } from "@humansignal/icons";
 
-const allowedKeys = ["ArrowUp", "ArrowDown", "Backspace", "Delete", /[0-9]/];
+const allowedKeys = ["ArrowUp", "ArrowDown", "Backspace", "删除", /[0-9]/];
 
 const CounterContext = React.createContext(null);
 
@@ -143,7 +143,7 @@ const Counter = ({ label, className, validate, required, skip, labelProps, ...pr
     </FormField>
   );
 
-  return label ? <Label {...(labelProps ?? {})} text={label} required={required} children={field} /> : field;
+  return label ? <Label{...(labelProps ?? {})} text={label} required={required} children={field} /> : field;
 };
 
 const CounterButton = ({ type }) => {

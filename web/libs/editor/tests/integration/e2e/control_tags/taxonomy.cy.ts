@@ -21,7 +21,7 @@ describe("Control Tags - Taxonomy", () => {
       task: dataWithPrediction,
     });
 
-    cy.contains("button", "Update").click();
+    cy.contains("button", "更新").click();
 
     cy.contains(
       "The number of options selected (2) exceed the maximum allowed (1). To proceed, first unselect excess options for: • Taxonomy (taxonomy)",
@@ -46,7 +46,7 @@ describe("Control Tags - Taxonomy", () => {
       ])
       .init();
 
-    cy.contains("button", "Update").click();
+    cy.contains("button", "更新").click();
 
     cy.contains(
       "The number of options selected (2) exceed the maximum allowed (1). To proceed, first unselect excess options for: • Taxonomy (taxonomy)",

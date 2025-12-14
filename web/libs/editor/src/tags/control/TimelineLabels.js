@@ -21,7 +21,7 @@ import { HtxLabels, LabelsModel } from "./Labels/Labels";
  *
  * @example
  * <View>
- *   <Header>Label timeline spans:</Header>
+ *   <Header>标签 timeline spans:</Header>
  *   <Video name="video" value="$video" />
  *   <TimelineLabels name="timelineLabels" toName="video">
  *     <Label value="Nothing" background="#944BFF"/>

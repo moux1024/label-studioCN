@@ -166,7 +166,7 @@ export const PanelBase: FC<PanelBaseProps> = ({
   }, [detached, visible, alignment]);
 
   const tooltipText = useMemo(() => {
-    return `${visible ? "Collapse" : "Expand"} ${tooltip}`;
+    return `${visible ? "收起" : "展开"} ${tooltip}`;
   }, [visible, tooltip]);
 
   useEffect(() => {

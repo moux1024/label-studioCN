@@ -24,7 +24,7 @@ const DetailsPanelComponent: FC<DetailsPanelProps> = ({ currentEntity, regions, 
   const selectedRegions = regions.selection;
 
   return (
-    <PanelBase {...props} currentEntity={currentEntity} name="details" title="Details">
+    <PanelBase {...props} currentEntity={currentEntity} name="details" title="详情">
       <Content selection={selectedRegions} currentEntity={currentEntity} />
     </PanelBase>
   );
@@ -142,7 +142,7 @@ const InfoTab: FC<any> = inject("store")(
               <EmptyState
                 icon={<IconCursor width={24} height={24} />}
                 header="View region details"
-                description={<>Select a region to view its properties, metadata and available actions</>}
+                description={<>选择 a region to view its properties, metadata and available actions</>}
               />
             ) : (
               <>

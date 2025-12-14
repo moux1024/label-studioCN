@@ -103,7 +103,7 @@ const UsersInjector = inject(({ store }) => {
 Annotators.filterItems = (items) => {
   return items.filter((userId) => {
     const user = DM.usersMap.get(userId);
-    return !(user?.firstName === "Deleted" && user?.lastName === "User");
+    return !(user?.firstName === "Deleted" && user?.lastName === "用户");
   });
 };
 
@@ -138,13 +138,13 @@ Annotators.customOperators = [
     key: "contains",
     label: "contains",
     valueType: "list",
-    input: (props) => (isFilterMembers ? <UserSelect {...props} /> : <VariantSelect {...props} />),
+    input: (props) => (isFilterMembers ? <User选择{...props} /> : <Variant选择{...props} />),
   },
   {
     key: "not_contains",
     label: "not contains",
     valueType: "list",
-    input: (props) => (isFilterMembers ? <UserSelect {...props} /> : <VariantSelect {...props} />),
+    input: (props) => (isFilterMembers ? <User选择{...props} /> : <Variant选择{...props} />),
   },
   ...Common,
 ];

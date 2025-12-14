@@ -116,9 +116,7 @@ export const PersonalInfo = () => {
             />
           </form>
           {user?.avatar && (
-            <Button type="submit" variant="negative" look="outlined" size="medium" onClick={deleteUserAvatar}>
-              Delete
-            </Button>
+            <Button type="submit" variant="negative" look="outlined" size="medium" onClick={deleteUserAvatar}>删除</Button>
           )}
         </div>
         <form onSubmit={userFormSubmitHandler} className={styles.sectionContent}>
@@ -155,9 +153,7 @@ export const PersonalInfo = () => {
             </div>
           </div>
           <div className={clsx(styles.flexRow, styles.flexEnd)}>
-            <Button style={{ width: 125 }} waiting={isInProgress}>
-              Save
-            </Button>
+            <Button style={{ width: 125 }} waiting={isInProgress}>保存</Button>
           </div>
         </form>
       </div>

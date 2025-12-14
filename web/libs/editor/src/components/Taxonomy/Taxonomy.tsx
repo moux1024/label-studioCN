@@ -291,9 +291,7 @@ const Item: React.FC<RowProps> = ({ style, item, dimensionCallback, maxWidth, is
                               Add Inside
                             </Menu.Item>
                             {item.row.origin === "session" && (
-                              <Menu.Item key="delete" className={styles.taxonomy__action} onClick={onDelete}>
-                                Delete
-                              </Menu.Item>
+                              <Menu.Item key="delete" className={styles.taxonomy__action} onClick={onDelete}>删除</Menu.Item>
                             )}
                           </Menu>
                         }
@@ -442,9 +440,7 @@ const TaxonomyDropdown = ({ show, flatten, items, dropdownRef, isEditable }: Tax
                 type="button"
                 onClick={addInside}
                 aria-label="Add new label"
-              >
-                Add
-              </Button>
+              >添加</Button>
             </div>
           ) : null}
         </div>

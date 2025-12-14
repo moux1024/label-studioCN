@@ -176,7 +176,7 @@ export const DataView = injector(
         if (store.SDK.type === "DE" && ["canceled", "failed"].includes(datasetStatusID)) {
           return (
             <div className={cn("syncInProgress").toClassName()}>
-              <h3 className={cn("syncInProgress").elem("title").toClassName()}>Failed to sync data</h3>
+              <h3 className={cn("syncInProgress").elem("title").toClassName()}>失败 to sync data</h3>
               <div className={cn("syncInProgress").elem("text").toClassName()}>
                 Check your storage settings. You may need to recreate this dataset
               </div>
@@ -216,9 +216,7 @@ export const DataView = injector(
                   });
                   await store.currentView?.reload();
                 }}
-              >
-                Refresh
-              </Button>
+              >刷新</Button>
             </div>
           );
         }
@@ -315,7 +313,7 @@ export const DataView = injector(
           style: { width: 150 },
         },
         {
-          resolver: (col) => ["Date", "Datetime"].includes(col.type),
+          resolver: (col) => ["日期", "Datetime"].includes(col.type),
           style: { width: 240 },
         },
         {

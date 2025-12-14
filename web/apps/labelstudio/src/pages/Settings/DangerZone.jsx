@@ -60,9 +60,7 @@ export const DangerZone = () => {
               look="outline"
               onClick={() => ctrl?.hide()}
               data-testid="danger-zone-cancel-button"
-            >
-              Cancel
-            </Button>
+            >取消</Button>
             <Button
               variant="negative"
               disabled={!isValid}

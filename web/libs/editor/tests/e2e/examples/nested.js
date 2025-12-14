@@ -5,8 +5,8 @@ const config = `
     <Label value="Organization" background="darkorange"/>
     <Label value="Fact" background="orange"/>
     <Label value="Money" background="green"/>
-    <Label value="Date" background="darkblue"/>
-    <Label value="Time" background="blue"/>
+    <Label value="日期" background="darkblue"/>
+    <Label value="时间" background="blue"/>
     <Label value="Ordinal" background="purple"/>
     <Label value="Percent" background="#842"/>
     <Label value="Product" background="#428"/>
@@ -87,7 +87,7 @@ const result = [
     origin: "manual",
   },
   {
-    value: { start: 0, end: 3, text: "Not", labels: ["Time"] },
+    value: { start: 0, end: 3, text: "Not", labels: ["时间"] },
     id: "SnZmh8A4m2",
     from_name: "ner",
     to_name: "my_text",

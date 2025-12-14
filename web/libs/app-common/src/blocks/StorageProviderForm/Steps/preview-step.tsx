@@ -89,7 +89,7 @@ export const PreviewStep = ({
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Left Column Header */}
-        <h4>Import Configuration</h4>
+        <h4>导入 Configuration</h4>
 
         {/* Right Column Header with Button */}
         <div className="flex justify-between items-center">
@@ -144,7 +144,7 @@ export const PreviewStep = ({
                 <p className="text-sm text-muted-foreground">Choose how to interpret your data from storage</p>
                 <Select
                   name="use_blob_urls"
-                  value={formData.use_blob_urls ? "Files" : "Tasks"}
+                  value={formData.use_blob_urls ? "Files" : "任务"}
                   onChange={(value) => {
                     const isFiles = value === "Files";
                     setFormState((prevState) => ({
@@ -165,7 +165,7 @@ export const PreviewStep = ({
                         label: "Files - Automatically creates a task for each storage object (e.g. JPG, MP3, TXT)",
                       },
                       {
-                        value: "Tasks",
+                        value: "任务",
                         label: "Tasks - Treat each JSON, JSONL, or Parquet as one or more task definitions per file",
                       },
                     ] as any
@@ -270,7 +270,7 @@ export const PreviewStep = ({
                 <div className="rounded-full bg-muted p-3 mb-4">
                   <IconDocument className="h-6 w-6 text-muted-foreground" />
                 </div>
-                <h3 className="font-medium mb-1">No Preview Available</h3>
+                <h3 className="font-medium mb-1">否 Preview Available</h3>
                 <p className="text-sm text-muted-foreground max-w-md">
                   Configure your import settings and click "Load Preview" to see a sample of files that will be
                   imported.
@@ -282,7 +282,7 @@ export const PreviewStep = ({
                 <div className="rounded-full bg-muted p-3 mb-4">
                   <IconSearch className="h-6 w-6 text-muted-foreground" />
                 </div>
-                <h3 className="font-medium mb-1">No Files Found</h3>
+                <h3 className="font-medium mb-1">否 Files Found</h3>
                 <p className="text-sm text-muted-foreground max-w-md">
                   No files matching your current criteria were found. Try adjusting your filter settings and reload the
                   preview.

@@ -8,7 +8,7 @@ import { useValueTracker } from "../../Utils";
 import { default as Label } from "../Label/Label";
 import "./Counter.scss";
 
-const allowedKeys = ["ArrowUp", "ArrowDown", "Backspace", "Delete", /[0-9]/];
+const allowedKeys = ["ArrowUp", "ArrowDown", "Backspace", "删除", /[0-9]/];
 
 const CounterContext = createContext(null);
 
@@ -186,7 +186,7 @@ const Counter = ({
     </FormField>
   );
 
-  return label ? <Label {...(labelProps ?? {})} text={label} required={required} children={field} /> : field;
+  return label ? <Label{...(labelProps ?? {})} text={label} required={required} children={field} /> : field;
 };
 
 const CounterButton = ({ type }) => {

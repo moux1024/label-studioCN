@@ -49,7 +49,7 @@ stateRegistry.registerBatch({
 
   COMPLETED: {
     type: StateType.TERMINAL,
-    label: "Completed",
+    label: "已完成",
     tooltips: {
       project: "All work on this project is completed",
       task: "Task has been completed",

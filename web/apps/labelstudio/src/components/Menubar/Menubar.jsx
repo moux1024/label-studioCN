@@ -220,8 +220,8 @@ export const Menubar = ({ enabled, defaultOpened, defaultPinned, children, onSid
               style={{ width: 240 }}
             >
               <Menu>
-                {isFF(FF_HOMEPAGE) && <Menu.Item label="Home" to="/" icon={<IconHome />} data-external exact />}
-                <Menu.Item label="Projects" to="/projects" icon={<IconFolder />} data-external exact />
+                {isFF(FF_HOMEPAGE) && <Menu.Item label="首页" to="/" icon={<IconHome />} data-external exact />}
+                <Menu.Item label="项目" to="/projects" icon={<IconFolder />} data-external exact />
                 <Menu.Item label="Organization" to="/organization" icon={<IconPeople />} data-external exact />
 
                 <Menu.Spacer />
@@ -243,7 +243,7 @@ export const Menubar = ({ enabled, defaultOpened, defaultPinned, children, onSid
                   rel="noreferrer"
                 />
                 <Menu.Item
-                  label="Slack Community"
+                  label="Slack 社区"
                   href="https://slack.labelstud.io/?source=product-menu"
                   icon={<IconSlack />}
                   target="_blank"

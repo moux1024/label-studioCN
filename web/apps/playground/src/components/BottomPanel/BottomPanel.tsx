@@ -32,14 +32,14 @@ export const BottomPanel = forwardRef<BottomPanelRef, BottomPanelProps>(({ isCol
         style={{ minHeight: HEADER_HEIGHT, maxHeight: HEADER_HEIGHT }}
       >
         <div className="flex flex-row w-full">
-          <div className="flex-1 flex items-center font-semibold text-body-small px-4">Data Input</div>
+          <div className="flex-1 flex items-center font-semibold text-body-small px-4">数据 Input</div>
           <div className="w-[1px] h-[33px] bg-neutral-border" />
-          <div className="flex-1 flex items-center font-semibold text-body-small px-4">Data Output</div>
+          <div className="flex-1 flex items-center font-semibold text-body-small px-4">数据 Output</div>
         </div>
         {/* Floating collapse/expand button */}
         <button
           type="button"
-          aria-label={isCollapsed ? "Expand" : "Collapse"}
+          aria-label={isCollapsed ? "展开" : "收起"}
           onClick={() => setIsCollapsed(!isCollapsed)}
           className="lsf-button lsf-button_look_ lsf-collapsible-bottom-panel-toggle absolute right-[5px] top-1/2 -translate-y-1/2 !h-6 !w-6 !p-0 flex items-center justify-center !bg-transparent !border-none"
           style={{ zIndex: 10 }}

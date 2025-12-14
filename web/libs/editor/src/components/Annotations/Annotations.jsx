@@ -153,9 +153,9 @@ const Annotation = observer(({ item, store }) => {
               placement="bottomLeft"
               title={"Please confirm you want to delete this annotation"}
               onConfirm={confirm}
-              okText="Delete"
+              okText="删除"
               okType="danger"
-              cancelText="Cancel"
+              cancelText="取消"
             >
               <Button size="small" look="string" variant="negative" aria-label="Delete selected annotation">
                 <DeleteOutlined />
@@ -217,7 +217,7 @@ class Annotations extends Component {
     const title = (
       <div className={`${styles.title} ${styles.titlespace}`}>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <h3>Annotations</h3>
+          <h3>标注</h3>
         </div>
 
         <div style={{ marginRight: "1px" }}>
@@ -257,7 +257,7 @@ class Annotations extends Component {
 
     return (
       <Card title={title} size="small" bodyStyle={{ padding: "0", paddingTop: "1px" }}>
-        <List>{store.annotationStore.annotations ? content : <p>No annotations submitted yet</p>}</List>
+        <List>{store.annotationStore.annotations ? content : <p>否 annotations submitted yet</p>}</List>
       </Card>
     );
   }

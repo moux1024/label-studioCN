@@ -81,7 +81,7 @@ const panelView: Record<PanelType, PanelView> = {
     icon: IconHamburger,
   },
   details: {
-    title: "Details",
+    title: "详情",
     component: DetailsPanel as FC<PanelProps>,
     icon: IconDetails,
   },

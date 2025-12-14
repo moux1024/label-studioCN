@@ -14,10 +14,10 @@ const THRESHOLD_MIN = 0;
 const THRESHOLD_MIN_DIFF = 0.001;
 
 export const Tab = types
-  .model("View", {
+  .model("查看", {
     id: StringOrNumberID,
 
-    title: "Tasks",
+    title: "任务",
     oldTitle: types.maybeNull(types.string),
 
     key: types.optional(types.string, guidGenerator),

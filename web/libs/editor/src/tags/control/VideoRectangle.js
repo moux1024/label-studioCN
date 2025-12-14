@@ -12,7 +12,7 @@ import ControlBase from "./Base";
  * @example
  * <!--Video Object Tracking-->
  * <View>
- *   <Header>Label the video:</Header>
+ *   <Header>标签 the video:</Header>
  *   <Video name="video" value="$video" />
  *   <VideoRectangle name="box" toName="video" />
  *

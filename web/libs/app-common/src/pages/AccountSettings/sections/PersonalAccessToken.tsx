@@ -64,9 +64,7 @@ export const PersonalAccessToken = () => {
             >
               {tokenCopied ? "Copied!" : "Copy"}
             </Button>
-            <Button variant="negative" look="outlined" onClick={() => reset.mutate()}>
-              Reset
-            </Button>
+            <Button variant="negative" look="outlined" onClick={() => reset.mutate()}>重置</Button>
           </div>
         </div>
         <div>

@@ -39,7 +39,7 @@ export const ModelVersionSelector = ({
         const label = `${item.title} (${item.readable_state})`;
 
         return {
-          group: "Models",
+          group: "模型",
           value: item.title,
           label,
         };
@@ -75,7 +75,7 @@ export const ModelVersionSelector = ({
 
   return (
     <div>
-      <label>Select which predictions or which model you want to use:</label>
+      <label>选择 which predictions or which model you want to use:</label>
       <div style={{ display: "flex", alignItems: "center", width: 400 }}>
         <div style={{ flex: 1, paddingRight: 16 }}>
           <Select

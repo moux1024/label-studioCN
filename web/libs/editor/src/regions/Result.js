@@ -365,7 +365,7 @@ const Result = types
       if (!self.canBeSubmitted) return null;
 
       if (!isDefined(data.value)) data.value = {};
-      // with `mergeLabelsAndResults` control uses only one result even with external `Labels`
+      // with `mergeLabelsAndResults` control uses only one result even with external `标签`
       if (self.to_name.mergeLabelsAndResults) {
         // we are in labeling result, so skipping it, labels will be added to the main result
         if (type === "labels") return null;

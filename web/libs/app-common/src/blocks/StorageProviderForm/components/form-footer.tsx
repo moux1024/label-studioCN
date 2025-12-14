@@ -45,9 +45,7 @@ export const FormFooter = ({
 }: FormFooterProps) => {
   return (
     <div className="flex items-center justify-between p-wide border-t border-neutral-border bg-neutral-background">
-      <Button look="outlined" onClick={onPrevious} disabled={currentStep === 0}>
-        Previous
-      </Button>
+      <Button look="outlined" onClick={onPrevious} disabled={currentStep === 0}>上一步</Button>
 
       <div className="flex gap-tight items-center">
         {(isEditMode ? currentStep === 0 : currentStep === 1) && (
@@ -88,13 +86,11 @@ export const FormFooter = ({
                 : undefined
           }
         >
-          {currentStep < totalSteps - 1 ? "Next" : target === "export" ? "Save" : "Save & Sync"}
+          {currentStep < totalSteps - 1 ? "下一步" : target === "export" ? "保存" : "Save & Sync"}
         </Button>
 
         {currentStep === totalSteps - 1 && target !== "export" && onSave && (
-          <Button onClick={onSave} waiting={saveStorage?.isLoading}>
-            Save
-          </Button>
+          <Button onClick={onSave} waiting={saveStorage?.isLoading}>保存</Button>
         )}
       </div>
     </div>

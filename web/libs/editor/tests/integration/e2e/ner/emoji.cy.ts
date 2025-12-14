@@ -50,7 +50,7 @@ describe("NER - Emoji - Text", () => {
     LabelStudio.params().config(simpleTextConfig).data(multilineTextData).withResult([]).init();
     LabelStudio.waitForObjectsReady();
     Labels.select("region");
-    RichText.selectBetweenTexts("Warning", "test");
+    RichText.selectBetweenTexts("警告", "test");
     RichText.hasRegionWithText("Warning:");
     RichText.hasRegionWithText("🐱 This is a test");
     LabelStudio.serialize().then((results) => {
@@ -136,7 +136,7 @@ describe("NER - Emoji - Text", () => {
     LabelStudio.params().config(simpleHyperTextConfig).data(simpleHyperTextData).withResult([]).init();
     LabelStudio.waitForObjectsReady();
     Labels.select("region");
-    RichText.selectBetweenTexts("Warning", "test");
+    RichText.selectBetweenTexts("警告", "test");
     RichText.hasRegionWithText("Warning:");
     RichText.hasRegionWithText("🐱 This is a test");
     LabelStudio.serialize().then((results) => {

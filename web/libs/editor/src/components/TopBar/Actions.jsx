@@ -51,11 +51,11 @@ export const Actions = ({ store }) => {
             variant="negative"
             look="string"
             type="text"
-            aria-label="Delete"
+            aria-label="删除"
             onClick={() => {
               confirm({
                 title: "Delete annotation",
-                body: "This action cannot be undone",
+                body: "此操作无法撤销",
                 buttonLook: "destructive",
                 okText: "Proceed",
                 onOk: () => entity.list.deleteAnnotation(entity),
@@ -102,7 +102,7 @@ export const Actions = ({ store }) => {
         icon={<IconSettings />}
         variant="neutral"
         look="string"
-        aria-label="Settings"
+        aria-label="设置"
         onClick={() => store.toggleSettings()}
         style={{
           height: 36,

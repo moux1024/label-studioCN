@@ -44,8 +44,8 @@ export const recipes = [
     <Label value="Organization" background="darkorange"/>
     <Label value="Fact" background="orange"/>
     <Label value="Money" background="green"/>
-    <Label value="Date" background="darkblue"/>
-    <Label value="Time" background="blue"/>
+    <Label value="日期" background="darkblue"/>
+    <Label value="时间" background="blue"/>
     <Label value="Ordinal" background="purple"/>
     <Label value="Percent" background="#842"/>
     <Label value="Product" background="#428"/>

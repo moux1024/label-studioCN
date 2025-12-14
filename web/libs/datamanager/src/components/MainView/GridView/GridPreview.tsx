@@ -101,7 +101,7 @@ const TaskModal = observer(({ view, tasks, imageField, currentTaskId, setCurrent
     <div className={styles.modal}>
       <div className={styles.header}>
         <Checkbox checked={view.selected.isSelected(task.id)} onChange={onSelect}>
-          Task {task.id}
+          任务{task.id}
         </Checkbox>
         <div className={styles.actions}>
           <Tooltip title={tooltip}>

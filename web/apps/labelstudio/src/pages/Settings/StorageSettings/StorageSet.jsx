@@ -36,7 +36,7 @@ export const StorageSet = forwardRef(
 
     const showStorageFormModal = useCallback(
       (storage) => {
-        const action = storage ? "Edit" : "Connect";
+        const action = storage ? "编辑" : "Connect";
         const actionTarget = target === "export" ? "Target" : "Source";
         const title = `${action} ${actionTarget} Storage`;
 

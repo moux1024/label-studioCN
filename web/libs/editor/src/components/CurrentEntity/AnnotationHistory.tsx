@@ -162,7 +162,7 @@ const AnnotationHistoryComponent: FC<any> = ({
           const { id, user, createdDate } = item;
           const isLastItem = lastItem?.id === item.id;
           const isSelected = isLastItem && !selectedHistory ? !isDraftSelected : selectedHistory?.id === item.id;
-          const hiddenUser = infoIsHidden ? { email: currentUser?.id === user.id ? "Me" : "User" } : null;
+          const hiddenUser = infoIsHidden ? { email: currentUser?.id === user.id ? "Me" : "用户" } : null;
 
           return (
             <HistoryItem
@@ -339,7 +339,7 @@ const HistoryComment: FC<{
             setCollapsed((v) => !v);
           }}
         >
-          {collapsed ? "Show more" : "Show less"}
+          {collapsed ? "显示更多" : "显示更少"}
         </div>
       )}
     </div>

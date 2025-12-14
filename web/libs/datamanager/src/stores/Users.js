@@ -3,7 +3,7 @@ import { camelizeKeys } from "../utils/helpers";
 import { StringOrNumberID } from "./types";
 
 export const User = types
-  .model("User", {
+  .model("用户", {
     id: StringOrNumberID,
     firstName: types.string,
     lastName: types.string,

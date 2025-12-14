@@ -125,9 +125,9 @@ const TaxonomySearch = React.forwardRef<TaxonomySearchRef, TaxonomySearchProps>(
       }}
       onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
         // to prevent selected items from being deleted
-        if (e.key === "Backspace" || e.key === "Delete") e.stopPropagation();
+        if (e.key === "Backspace" || e.key === "删除") e.stopPropagation();
       }}
-      placeholder={"Search"}
+      placeholder={"搜索"}
       data-testid={"taxonomy-search"}
       name={"taxonomy-search-input"}
       className={cn("taxonomy-search-input").toClassName()}

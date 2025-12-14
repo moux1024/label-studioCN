@@ -18,7 +18,7 @@ import { ff } from "@humansignal/core";
 const HotkeysDescription = () => {
   const columns = [
     { title: "Shortcut", dataIndex: "combo", key: "combo" },
-    { title: "Description", dataIndex: "descr", key: "descr" },
+    { title: "描述", dataIndex: "descr", key: "descr" },
   ];
 
   const keyNamespaces = Hotkey.namespaces();
@@ -210,7 +210,7 @@ const DEFAULT_MODAL_SETTINGS = isFF(FF_DEV_3873)
     }
   : {
       name: "settings-modal-old",
-      title: "Settings",
+      title: "设置",
       bodyStyle: { paddingTop: "0" },
     };
 

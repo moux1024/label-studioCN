@@ -1,6 +1,6 @@
 type LabelStudio = any;
 
-export class LSFHistory {
+export class LSF历史{
   history: Array<{ taskID: number; annotationID: number }> = [];
 
   lsf: LabelStudio = null;

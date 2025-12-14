@@ -267,7 +267,7 @@ export const Pagination: FC<PaginationProps> = forwardRef<any, PaginationProps>(
                   if (allowInput) setInputMode(true);
                 }}
               >
-                {currentPage} <span>of {totalPages}</span>
+                {currentPage} <span>共 {totalPages}</span>
                 <div
                   onClick={() => {
                     /*  */

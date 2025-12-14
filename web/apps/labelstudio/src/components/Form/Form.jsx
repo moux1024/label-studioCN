@@ -524,9 +524,7 @@ Form.Builder = React.forwardRef(
         {children}
         {props.autosubmit !== true && withActions === true && (
           <Form.Actions>
-            <Button type="submit" className="w-[120px]" aria-label="Submit form">
-              Save
-            </Button>
+            <Button type="submit" className="w-[120px]" aria-label="Submit form">保存</Button>
           </Form.Actions>
         )}
       </Form>

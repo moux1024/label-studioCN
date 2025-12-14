@@ -210,7 +210,7 @@ export const DataManagerPage = ({ ...props }) => {
 
   return crashed ? (
     <div className={cn("crash").toClassName()}>
-      <div className={cn("crash").elem("info").toClassName()}>Project was deleted or not yet created</div>
+      <div className={cn("crash").elem("info").toClassName()}>项目 was deleted or not yet created</div>
 
       <Button to="/projects" aria-label="Back to projects">
         Back to projects
@@ -239,7 +239,7 @@ DataManagerPage.context = ({ dmRef }) => {
   const [mode, setMode] = useState(dmRef?.mode ?? "explorer");
 
   const links = {
-    "/settings": "Settings",
+    "/settings": "设置",
   };
 
   const updateCrumbs = (currentMode) => {

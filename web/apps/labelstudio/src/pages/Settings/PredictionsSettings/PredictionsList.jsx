@@ -88,9 +88,7 @@ const VersionCard = ({ version, selected, onSelect, editable, onDelete }) => {
           align="right"
           content={
             <Menu size="medium" contextual>
-              <Menu.Item onClick={() => confirmDelete(version)} isDangerous>
-                Delete
-              </Menu.Item>
+              <Menu.Item onClick={() => confirmDelete(version)} isDangerous>删除</Menu.Item>
             </Menu>
           }
         >

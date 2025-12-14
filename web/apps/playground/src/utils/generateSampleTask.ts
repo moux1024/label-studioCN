@@ -82,7 +82,7 @@ const originalFetch = global.fetch;
 global.fetch = async (url: string) => {
   if (url.startsWith(SAMPLE_CSV)) {
     const params = new URLSearchParams(url.split("?")[1]);
-    const timeColumn = params.get("time") || "None";
+    const timeColumn = params.get("time") || "无";
     const values = params.get("values");
     const separator = params.get("sep") || ",";
     const type = params.get("type") || "csv";
@@ -371,7 +371,7 @@ export async function generateSampleTaskFromConfig(config: string): Promise<{
     } else if (tag === "hypertext") {
       data[key] = SAMPLE_HTML;
     } else if (tag === "choices" || tag.endsWith("labels")) {
-      const type = tag.endsWith("labels") ? "Label" : "Choice";
+      const type = tag.endsWith("labels") ? "标签" : "Choice";
 
       data[key] = [
         { value: `Dynamic${type}1`, background: "#ff0000" },

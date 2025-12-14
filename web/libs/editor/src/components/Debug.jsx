@@ -72,7 +72,7 @@ const DebugComponent = ({ store }) => {
       <Form>
         <div style={{ display: "flex" }}>
           <div style={{ flexBasis: "50%" }}>
-            <p>Data</p>
+            <p>数据</p>
             <textarea
               style={{ width: "100%" }}
               ref={refData}
@@ -90,7 +90,7 @@ const DebugComponent = ({ store }) => {
             />
           </div>
           <div style={{ flexBasis: "50%" }}>
-            <p>Annotations</p>
+            <p>标注</p>
             <textarea
               style={{ width: "100%" }}
               ref={refAnnotations}

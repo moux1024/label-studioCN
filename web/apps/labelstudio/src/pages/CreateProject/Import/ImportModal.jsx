@@ -72,7 +72,7 @@ export const Inner = () => {
       bare
     >
       <Modal.Header divided>
-        <div className={cn("modal").elem("title").toClassName()}>Import Data</div>
+        <div className={cn("modal").elem("title").toClassName()}>导入 Data</div>
 
         <Space>
           <Button
@@ -82,18 +82,14 @@ export const Inner = () => {
             waiting={waiting}
             onClick={onCancel}
             aria-label="Cancel import"
-          >
-            Cancel
-          </Button>
+          >取消</Button>
           <Button
             size="small"
             onClick={onFinish}
             waiting={waiting || uploading}
             disabled={uploadDisabled}
             aria-label="Finish import"
-          >
-            Import
-          </Button>
+          >导入</Button>
         </Space>
       </Modal.Header>
       <ImportPage

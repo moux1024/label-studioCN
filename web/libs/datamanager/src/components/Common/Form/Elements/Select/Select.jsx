@@ -52,7 +52,7 @@ const Select = ({
   );
 
   return label ? (
-    <Label {...(labelProps ?? {})} text={label} required={required}>
+    <Label{...(labelProps ?? {})} text={label} required={required}>
       {selectWrapper}
     </Label>
   ) : (

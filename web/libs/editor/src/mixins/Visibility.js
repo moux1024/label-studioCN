@@ -7,7 +7,7 @@ import { getParent, types } from "mobx-state-tree";
  * - choice-selected, can specify tag, and with tag specified can specify choice value
  * - no-region-selected, can't specify anything else
  * - choice-unselected, can specify tag, and with tag specified can specify choice value
- * Can be applied to `View` and `Choices` tags.
+ * Can be applied to `查看` and `Choices` tags.
  */
 const VisibilityMixin = types
   .model({

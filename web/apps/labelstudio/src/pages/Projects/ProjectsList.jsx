@@ -22,7 +22,7 @@ export const ProjectsList = ({ projects, currentPage, totalItems, loadNextPage, 
       <div className={cn("projects-page").elem("pages").toClassName()}>
         <Pagination
           name="projects-list"
-          label="Projects"
+          label="项目"
           page={currentPage}
           totalItems={totalItems}
           urlParamName="page"
@@ -44,10 +44,8 @@ export const EmptyProjectsList = ({ openModal }) => {
         src={absoluteURL("/static/images/opossum_looking.png")}
       />
       <h1 className={cn("empty-projects-page").elem("header").toClassName()}>Heidi doesn't see any projects here!</h1>
-      <p>Create one and start labeling your data.</p>
-      <Button onClick={openModal} className="my-8" aria-label="Create new project">
-        Create Project
-      </Button>
+      <p>创建 one and start labeling your data.</p>
+      <Button onClick={openModal} className="my-8" aria-label="创建新项目">创建项目</Button>
     </div>
   );
 };
@@ -99,8 +97,8 @@ const ProjectCard = ({ project }) => {
               <Dropdown.Trigger
                 content={
                   <Menu contextual>
-                    <Menu.Item href={`/projects/${project.id}/settings`}>Settings</Menu.Item>
-                    <Menu.Item href={`/projects/${project.id}/data?labeling=1`}>Label</Menu.Item>
+                    <Menu.Item href={`/projects/${project.id}/settings`}>设置</Menu.Item>
+                    <Menu.Item href={`/projects/${project.id}/data?labeling=1`}>标签</Menu.Item>
                   </Menu>
                 }
               >

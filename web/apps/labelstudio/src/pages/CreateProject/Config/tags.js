@@ -34,7 +34,7 @@ const OBJECTS = {
         param: ($obj, value) =>
           value ? $obj.setAttribute("granularity", "word") : $obj.removeAttribute("granularity"),
         value: ($obj) => $obj.getAttribute("granularity") === "word",
-        when: ($obj) => $obj.$controls.filter((c) => c.tagName.endsWith("Labels")).length > 0,
+        when: ($obj) => $obj.$controls.filter((c) => c.tagName.endsWith("标签")).length > 0,
       },
     },
   },
@@ -65,7 +65,7 @@ const OBJECTS = {
 };
 
 const Labels = {
-  type: "Labels",
+  type: "标签",
   settings: {
     placeLabelsLeft: {
       title: "Display labels:",
@@ -87,7 +87,7 @@ const Labels = {
         const alreadyApplied = $container.getAttribute("style")?.includes("flex");
 
         if (!alreadyApplied) {
-          $container = $obj.ownerDocument.createElement("View");
+          $container = $obj.ownerDocument.createElement("查看");
           $labels.parentNode.insertBefore($container, $obj);
           $container.appendChild($obj);
           $container.appendChild($labels);
@@ -119,8 +119,8 @@ const Labels = {
       control: true,
       param: ($obj, value) => {
         if (value) {
-          const $filter = $obj.ownerDocument.createElement("Filter");
-          const $container = $obj.ownerDocument.createElement("View");
+          const $filter = $obj.ownerDocument.createElement("筛选");
+          const $container = $obj.ownerDocument.createElement("查看");
 
           $filter.setAttribute("toName", $obj.getAttribute("name"));
           $filter.setAttribute("minlength", 0);

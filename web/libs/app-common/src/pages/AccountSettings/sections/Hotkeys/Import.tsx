@@ -23,7 +23,7 @@ interface Hotkey {
   description?: string;
 }
 
-interface ImportData {
+interface Import数据{
   hotkeys?: Hotkey[];
   settings?: {
     autoTranslatePlatforms?: boolean;
@@ -163,7 +163,7 @@ export const ImportDialog = ({ open, onOpenChange, onImport }: ImportDialogProps
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[525px] bg-neutral-surface">
         <DialogHeader>
-          <DialogTitle>Import Hotkeys</DialogTitle>
+          <DialogTitle>导入 Hotkeys</DialogTitle>
           <DialogDescription>
             Paste your exported hotkeys JSON below. This will replace your current hotkeys. Make sure the JSON contains
             an array of hotkey objects with the required fields.
@@ -180,7 +180,7 @@ export const ImportDialog = ({ open, onOpenChange, onImport }: ImportDialogProps
           <textarea
             id="import-json"
             className="flex min-h-[150px] w-full rounded-md border border-neutral-border bg-transparent px-tight py-tighter typography-body-small placeholder:text-neutral-content-subtler focus-visible:ring-4 focus-visible:ring-primary-focus-outline focus-visible:border-neutral-border-bolder focus-visible:outline-0 transition-all resize-none"
-            placeholder='[{"id": 1, "section": "annotation-actions", "element": "button", "label": "Save", "key": "Ctrl+S"}]'
+            placeholder='[{"id": 1, "section": "annotation-actions", "element": "button", "label": "保存", "key": "Ctrl+S"}]'
             value={importText}
             onChange={handleTextareaChange}
             aria-describedby={error ? "import-error" : undefined}
@@ -188,16 +188,14 @@ export const ImportDialog = ({ open, onOpenChange, onImport }: ImportDialogProps
 
           {error && (
             <Alert variant="destructive" id="import-error">
-              <AlertTitle>Import Error</AlertTitle>
+              <AlertTitle>导入 Error</AlertTitle>
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           )}
         </div>
 
         <DialogFooter>
-          <Button variant="neutral" onClick={handleCancel}>
-            Cancel
-          </Button>
+          <Button variant="neutral" onClick={handleCancel}>取消</Button>
           <Button onClick={handleImport} disabled={!importText.trim()}>
             Import Hotkeys
           </Button>

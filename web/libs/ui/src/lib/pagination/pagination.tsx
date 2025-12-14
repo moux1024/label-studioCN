@@ -17,7 +17,7 @@ export interface PaginationProps {
   totalItems: number;
   /** Options for page size selector */
   pageSizeOptions?: number[];
-  /** Label to display (e.g., "Projects") */
+  /** Label to display (e.g., "项目") */
   label?: string;
   /** Whether to allow direct page number input */
   allowInput?: boolean;
@@ -199,7 +199,7 @@ export const Pagination: FC<PaginationProps> = ({
               className={cn(styles.button, styles["button-first"], currentPage === 1 && styles.disabled)}
               onClick={handleFirstPage}
               disabled={disabled || currentPage === 1}
-              aria-label="First page"
+              aria-label="首页"
             >
               <IconRewind width={24} height={24} />
             </Button>
@@ -212,7 +212,7 @@ export const Pagination: FC<PaginationProps> = ({
           className={cn(styles.button, styles["button-prev"], currentPage === 1 && styles.disabled)}
           onClick={handlePreviousPage}
           disabled={disabled || currentPage === 1}
-          aria-label="Previous page"
+          aria-label="上一页"
         >
           <IconChevronLeft width={24} height={24} />
         </Button>
@@ -254,7 +254,7 @@ export const Pagination: FC<PaginationProps> = ({
                 if (allowInput && !disabled) setInputMode(true);
               }}
             >
-              {currentPage} <span>of {displayTotalPages}</span>
+              {currentPage} <span>共 {displayTotalPages}</span>
             </div>
           )}
         </div>
@@ -264,7 +264,7 @@ export const Pagination: FC<PaginationProps> = ({
           className={cn(styles.button, styles["button-next"], currentPage >= displayTotalPages && styles.disabled)}
           onClick={handleNextPage}
           disabled={disabled || currentPage >= displayTotalPages}
-          aria-label="Next page"
+          aria-label="下一页"
         >
           <IconChevronRight />
         </Button>
@@ -277,7 +277,7 @@ export const Pagination: FC<PaginationProps> = ({
               className={cn(styles.button, styles["button-last"], currentPage >= displayTotalPages && styles.disabled)}
               onClick={handleLastPage}
               disabled={disabled || currentPage >= displayTotalPages}
-              aria-label="Last page"
+              aria-label="末页"
             >
               <IconFastForward />
             </Button>

@@ -83,7 +83,7 @@ export const AnnotationButton = observer(
       // this data can be missing in tests, but we don't have `infoIsHidden` there, so hiding logic like this
       const currentUser = annotationStore.store.user;
       const isCurrentUser = entity.user?.id === currentUser.id || entity.createdBy === currentUser.email;
-      hiddenUser = { email: isCurrentUser ? "Me" : "User" };
+      hiddenUser = { email: isCurrentUser ? "Me" : "用户" };
     }
 
     const displayUsername = hiddenUser ? hiddenUser.email : username;
@@ -200,7 +200,7 @@ export const AnnotationButton = observer(
               </>
             ),
             buttonLook: "negative",
-            okText: "Delete",
+            okText: "删除",
             onOk: () => {
               entity.list.deleteAnnotation(entity);
             },

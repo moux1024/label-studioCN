@@ -3,7 +3,7 @@
  */
 
 //represents a column of data
-export interface ColumnData {
+export interface Column数据{
   id: string;
   title: string;
   itemIds: string[];
@@ -18,19 +18,19 @@ export interface InputItem {
 }
 
 //represents the entire board of columns and items
-export interface BoardData {
+export interface Board数据{
   items: { [id: string]: InputItem };
   columns: { [id: string]: ColumnData };
   columnOrder: string[];
 }
 
 //represents a column of data
-export interface NewColumnData {
+export interface NewColumn数据{
   id: string;
   title: string;
 }
 //represents the entire board of columns and items
-export interface NewBoardData {
+export interface NewBoard数据{
   items: { [id: string]: InputItem };
   columns: NewColumnData[];
   itemIds: Record<string, string[]>;

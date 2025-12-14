@@ -142,7 +142,7 @@ class TextHighlight extends Component {
        */
       // text = window.getSelection().toString();
 
-      if (window.getSelection().type === "None") return;
+      if (window.getSelection().type === "无") return;
 
       /**
        * Create clone range

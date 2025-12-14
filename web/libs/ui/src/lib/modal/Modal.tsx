@@ -151,10 +151,10 @@ export const confirm = <T,>({ okText, onOk, cancelText, onCancel, buttonLook, ..
           look="outlined"
           variant="neutral"
           autoFocus
-          aria-label={cancelText ?? "Cancel"}
+          aria-label={cancelText ?? "取消"}
           data-testid="dialog-cancel-button"
         >
-          {cancelText ?? "Cancel"}
+          {cancelText ?? "取消"}
         </Button>
 
         <Button
@@ -163,10 +163,10 @@ export const confirm = <T,>({ okText, onOk, cancelText, onCancel, buttonLook, ..
             modal.close();
           }}
           variant={buttonLook ?? "primary"}
-          aria-label={okText ?? "Confirm"}
+          aria-label={okText ?? "确认"}
           data-testid="dialog-ok-button"
         >
-          {okText ?? "OK"}
+          {okText ?? "确定"}
         </Button>
       </div>
     ),
@@ -188,10 +188,10 @@ export const info = <T,>({ okText, onOkPress, ...props }: InfoProps<T>) => {
             onOkPress?.();
             modal.close();
           }}
-          aria-label={okText ?? "OK"}
+          aria-label={okText ?? "确定"}
           data-testid="dialog-ok-button"
         >
-          {okText ?? "OK"}
+          {okText ?? "确定"}
         </Button>
       </div>
     ),

@@ -42,9 +42,7 @@ const WebhookListItem = ({ webhook, onSelectActive, onActiveChange, onDelete, ca
       </div>
       {canChangeWebhooks && (
         <div className="hidden group-hover:flex gap-2">
-          <Button variant="primary" look="outlined" onClick={() => onSelectActive(webhook.id)} icon={<IconPencil />}>
-            Edit
-          </Button>
+          <Button variant="primary" look="outlined" onClick={() => onSelectActive(webhook.id)} icon={<IconPencil />}>编辑</Button>
           <Button
             variant="negative"
             look="outlined"
@@ -54,9 +52,7 @@ const WebhookListItem = ({ webhook, onSelectActive, onActiveChange, onDelete, ca
               })
             }
             icon={<IconCross />}
-          >
-            Delete
-          </Button>
+          >删除</Button>
         </div>
       )}
     </li>

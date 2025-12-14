@@ -50,9 +50,9 @@ describe("Label Studio UI info panels", () => {
     cy.contains("See a log of user actions").should("be.visible");
 
     // Change editor settings to keep region selected
-    cy.get("[aria-label='Settings']").click();
+    cy.get("[aria-label='设置']").click();
     cy.contains("Select region after creating it").click();
-    cy.get("[aria-label='Close']").click();
+    cy.get("[aria-label='关闭']").click();
 
     // Create second region in Text tag
     Labels.select("Word2");

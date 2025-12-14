@@ -170,7 +170,7 @@ export const ViewControls: FC<ViewControlsProps> = observer(
   },
 );
 
-interface LabelInfo {
+interface Label信息{
   label: string | React.ReactNode | JSX.Element;
   selectedLabel: string;
   icon: JSX.Element;

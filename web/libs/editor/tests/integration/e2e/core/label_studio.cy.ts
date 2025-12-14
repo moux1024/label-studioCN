@@ -63,13 +63,13 @@ describe("Label Studio UI init", () => {
     });
     cy.contains("Labeled regions will appear here").should("be.visible");
     // we already have an annotation, so we should have Update button and no Submit button
-    cy.contains("Update").should("be.visible");
-    cy.contains("Submit").should("not.exist");
+    cy.contains("更新").should("be.visible");
+    cy.contains("提交").should("not.exist");
 
     // now we create a new annotation and submit it
     cy.get('[aria-label="Create an annotation"]').click();
-    cy.contains("Update").should("not.exist");
-    cy.contains("Submit").should("be.visible");
+    cy.contains("更新").should("not.exist");
+    cy.contains("提交").should("be.visible");
 
     // submit by hotkey
     cy.get("body").type(Cypress.platform === "darwin" ? "{cmd}{enter}" : "{ctrl}{enter}");
@@ -80,7 +80,7 @@ describe("Label Studio UI init", () => {
     // @todo technically we should have Update button and no Submit button again,
     // @todo but currently this logic is crazy and we reload task in LSO/LSE anyway;
     // @todo so at least we check that there is only one of these two buttons.
-    cy.contains("Submit").should("be.visible");
-    cy.contains("Update").should("not.exist");
+    cy.contains("提交").should("be.visible");
+    cy.contains("更新").should("not.exist");
   });
 });

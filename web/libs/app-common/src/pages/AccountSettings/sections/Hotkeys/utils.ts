@@ -32,14 +32,14 @@ export interface DuplicateConfirmDialog {
 
 export type HotkeySettings = Record<string, unknown>;
 
-export interface ExportData {
+export interface Export数据{
   hotkeys: Hotkey[];
   settings: HotkeySettings;
   exportedAt: string;
   version: string;
 }
 
-export interface ImportData {
+export interface Import数据{
   hotkeys?: Hotkey[];
   settings?: HotkeySettings;
 }

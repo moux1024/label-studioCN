@@ -12,7 +12,7 @@ const TextArea = ({ label, className, validate, required, skip, labelProps, ...p
   );
 
   return label ? (
-    <Label {...(labelProps ?? {})} text={label} required={required}>
+    <Label{...(labelProps ?? {})} text={label} required={required}>
       {input}
     </Label>
   ) : (

@@ -231,7 +231,7 @@ const validateParentTag = (element, model) => {
  * @param {Object} element
  */
 const validateVisualTags = (element) => {
-  const visualTags = ["Collapse", "Filter", "Header", "Style", "View"];
+  const visualTags = ["收起", "筛选", "Header", "Style", "查看"];
   const { tagName } = element;
 
   if (visualTags.includes(tagName) && element.name) {

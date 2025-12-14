@@ -135,9 +135,7 @@ export const SkipButton = memo(
               store.skipTask({});
             }
           }}
-        >
-          Skip
-        </Button>
+        >跳过</Button>
       </>
     );
   }),

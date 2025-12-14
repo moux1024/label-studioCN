@@ -17,16 +17,16 @@ class Annotations extends Helper {
   }
 
   async submitAnnotation() {
-    await this._clickButton("Submit");
+    await this._clickButton("提交");
   }
 
   async updateAnnotation() {
-    await this._clickButton("Update");
+    await this._clickButton("更新");
   }
 
   async seeAnnotationSubmitted() {
-    await this._playwright.dontSeeElement(this._locateButton("Submit"));
-    await this._playwright.seeElement(this._locateButton("Update"));
+    await this._playwright.dontSeeElement(this._locateButton("提交"));
+    await this._playwright.seeElement(this._locateButton("更新"));
   }
 }
 

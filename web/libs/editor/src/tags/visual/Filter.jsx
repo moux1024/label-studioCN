@@ -14,7 +14,7 @@ import { FF_DEV_3391, isFF } from "../../utils/feature-flags";
  * <View>
  *   <Filter name="filter" toName="ner"
  *           hotkey="shift+f" minlength="0"
- *           placeholder="Filter" />
+ *           placeholder="筛选" />
  *   <Labels name="ner" toName="text" showInline="false">
  *     <Label value="Person" />
  *     <Label value="Organization" />

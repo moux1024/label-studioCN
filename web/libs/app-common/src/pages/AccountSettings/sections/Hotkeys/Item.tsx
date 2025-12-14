@@ -157,9 +157,7 @@ export const HotkeyItem = ({ hotkey, onEdit, isEditing, onSave, onCancel, onTogg
 
           {/* Action buttons */}
           <div className="flex flex-row gap-2">
-            <Button variant="primary" onClick={handleSave} disabled={!editedKey || !!error}>
-              Apply
-            </Button>
+            <Button variant="primary" onClick={handleSave} disabled={!editedKey || !!error}>应用</Button>
             <Button variant="neutral" icon={<IconClose />} onClick={handleCancel} />
           </div>
         </div>

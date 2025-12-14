@@ -33,12 +33,8 @@ export const HotkeysHeaderButtons = () => {
   return (
     <>
       <div className={`${styles.flexRow} justify-end gap-tight`}>
-        <Button variant="neutral" look="outlined" onClick={() => setImportDialogOpen(true)}>
-          Import
-        </Button>
-        <Button variant="neutral" look="outlined" onClick={handleExportHotkeys}>
-          Export
-        </Button>
+        <Button variant="neutral" look="outlined" onClick={() => setImportDialogOpen(true)}>导入</Button>
+        <Button variant="neutral" look="outlined" onClick={handleExportHotkeys}>导出</Button>
         <Button variant="negative" look="outlined" onClick={handleResetToDefaults}>
           Reset to Defaults
         </Button>
@@ -195,7 +191,7 @@ export const HotkeysManager = () => {
         setDirtyState(newDirtyState);
 
         const sectionName =
-          sectionId === "settings" ? "Settings" : typedHotkeySections.find((s: Section) => s.id === sectionId)?.title;
+          sectionId === "settings" ? "设置" : typedHotkeySections.find((s: Section) => s.id === sectionId)?.title;
 
         if (toast) {
           toast.show({
@@ -363,9 +359,7 @@ export const HotkeysManager = () => {
           </DialogDescription>
 
           <DialogFooter>
-            <Button variant="neutral" onClick={handleCancelDuplicate}>
-              Cancel
-            </Button>
+            <Button variant="neutral" onClick={handleCancelDuplicate}>取消</Button>
             <Button onClick={handleConfirmDuplicate}>Allow Duplicate</Button>
           </DialogFooter>
         </DialogContent>

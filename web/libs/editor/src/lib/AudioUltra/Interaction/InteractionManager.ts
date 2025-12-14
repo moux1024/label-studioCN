@@ -6,7 +6,7 @@ export interface InteractionManagerOptions {
   getLayerInfo?: (interactive: Interactive) => LayerInfo | null;
 }
 
-export interface LayerInfo {
+export interface Layer信息{
   offsetX: number;
   offsetY: number;
   width: number;

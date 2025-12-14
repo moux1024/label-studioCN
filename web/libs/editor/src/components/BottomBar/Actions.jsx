@@ -34,12 +34,12 @@ export const Actions = ({ store }) => {
       )}
       <Button
         type="text"
-        aria-label="Settings"
+        aria-label="设置"
         size="small"
         look="string"
         variant="neutral"
         onClick={() => store.toggleSettings()}
-        tooltip="Settings"
+        tooltip="设置"
         className="!p-0"
       >
         <IconSettings />

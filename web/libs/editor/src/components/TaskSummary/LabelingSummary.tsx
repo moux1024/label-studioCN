@@ -52,14 +52,14 @@ export const LabelingSummary = ({ hideInfo, annotations: all, controls, onSelect
   const annotations: AnnotationSummary[] = all.map((annotation) => ({
     id: annotation.pk,
     type: annotation.type,
-    user: hideInfo ? { email: currentUser?.id === annotation.user?.id ? "Me" : "User" } : annotation.user,
+    user: hideInfo ? { email: currentUser?.id === annotation.user?.id ? "Me" : "用户" } : annotation.user,
     createdBy:
       annotation.type === "prediction"
         ? annotation.createdBy
         : hideInfo
           ? currentUser?.id === annotation.user?.id
             ? "Me"
-            : "User"
+            : "用户"
           : userDisplayName(annotation.user as Record<string, string>),
     results:
       annotation.type === "prediction"

@@ -417,9 +417,7 @@ const HtxTextArea = observer(({ item }) => {
             )}
             {showAddButton && (
               <Form.Item>
-                <Button size="small" className="mt-[10px]" type="primary" htmlType="submit">
-                  Add
-                </Button>
+                <Button size="small" className="mt-[10px]" type="primary" htmlType="submit">添加</Button>
               </Form.Item>
             )}
           </Form.Item>

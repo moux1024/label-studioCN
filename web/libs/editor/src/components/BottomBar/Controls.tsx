@@ -232,7 +232,7 @@ export const Controls = controlsInjector<{ annotation: MSTAnnotation }>(
                 onClickMethod();
               }}
             >
-              {`${isUpdate ? "Update" : "Submit"} and exit`}
+              {`${isUpdate ? "更新" : "提交"} and exit`}
             </Button>
           </div>
         );
@@ -258,9 +258,7 @@ export const Controls = controlsInjector<{ annotation: MSTAnnotation }>(
                     await store.commentStore.commentFormSubmit();
                     store.submitAnnotation();
                   }}
-                >
-                  Submit
-                </Button>
+                >提交</Button>
                 {useExitOption ? (
                   <Dropdown.Trigger
                     alignment="top-right"
@@ -301,7 +299,7 @@ export const Controls = controlsInjector<{ annotation: MSTAnnotation }>(
                   store.updateAnnotation();
                 }}
               >
-                {isUpdate ? "Update" : "Submit"}
+                {isUpdate ? "更新" : "提交"}
               </Button>
               {useExitOption ? (
                 <Dropdown.Trigger

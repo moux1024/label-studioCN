@@ -5,7 +5,7 @@
 import CM from "codemirror";
 
 const Pos = CM.Pos;
-const topTags = ["View"];
+const topTags = ["查看"];
 
 function matches(hint: string, typed: string, matchInMiddle?: boolean) {
   if (matchInMiddle) return hint.includes(typed);

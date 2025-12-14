@@ -371,7 +371,7 @@ class DDStaticElement {
   }
 }
 
-class DomData {
+class Dom数据{
   private elements: Array<DDStaticElement | DDDynamicBlock | DDExtraText> = [];
   private endPos: number;
   private displayedText = "";

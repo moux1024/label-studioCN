@@ -58,7 +58,7 @@ export const MembershipInfo = () => {
           role = "Reviewer";
           break;
         case "NO":
-          role = "Pending";
+          role = "待处理";
           break;
       }
 
@@ -101,7 +101,7 @@ export const MembershipInfo = () => {
   return (
     <div className={styles.membershipInfo} id="membership-info">
       <div className="flex gap-2 w-full justify-between">
-        <div>User ID</div>
+        <div>用户 ID</div>
         <div>{user?.id}</div>
       </div>
 
@@ -111,12 +111,12 @@ export const MembershipInfo = () => {
       </div>
 
       <div className="flex gap-2 w-full justify-between">
-        <div>Annotations Submitted</div>
+        <div>标注 Submitted</div>
         <div>{membership.data?.annotationCount}</div>
       </div>
 
       <div className="flex gap-2 w-full justify-between">
-        <div>Projects contributed to</div>
+        <div>项目 contributed to</div>
         <div>{membership.data?.contributions}</div>
       </div>
 

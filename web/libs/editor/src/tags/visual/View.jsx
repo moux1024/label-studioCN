@@ -8,7 +8,7 @@ import VisibilityMixin from "../../mixins/Visibility";
 import { AnnotationMixin } from "../../mixins/AnnotationMixin";
 
 /**
- * The `View` element is used to configure the display of blocks, similar to the div tag in HTML.
+ * The `查看` element is used to configure the display of blocks, similar to the div tag in HTML.
  * @example
  * <!-- Create two cards that flex to take up 50% of the screen width on the labeling interface -->
  * <View style="display: flex;">

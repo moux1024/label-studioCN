@@ -367,8 +367,7 @@ const HtxDateTime = inject("store")(
     return (
       <div className="htx-datetime" style={visibleStyle} ref={item.elementRef}>
         {item.showMonth && (
-          <Select
-            {...visual}
+          <选择{...visual}
             name={`${item.name}-date`}
             disabled={disabled}
             value={item.month}
@@ -379,8 +378,7 @@ const HtxDateTime = inject("store")(
           />
         )}
         {item.showYear && (
-          <Select
-            {...visual}
+          <选择{...visual}
             name={`${item.name}-year`}
             disabled={disabled}
             value={item.year || ""}

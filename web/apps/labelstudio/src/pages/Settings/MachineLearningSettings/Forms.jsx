@@ -23,7 +23,7 @@ const CustomBackendForm = ({ action, backend, project, onSubmit }) => {
       <Input type="hidden" name="project" value={project.id} />
 
       <Form.Row columnCount={1}>
-        <Input name="title" label="Name" placeholder="Enter a name" required />
+        <Input name="title" label="名称" placeholder="Enter a name" required />
       </Form.Row>
 
       <Form.Row columnCount={1}>

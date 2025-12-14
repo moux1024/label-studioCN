@@ -15,7 +15,7 @@ declare global {
   }
 }
 
-interface APIUser {
+interface API用户{
   id: number;
   username: string;
   first_name: string;

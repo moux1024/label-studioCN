@@ -88,5 +88,5 @@ export default class ErrorBoundary extends Component {
 export const ErrorUI = () => {
   const context = React.useContext(ErrorContext);
 
-  return context.hasError && <div className="error">Error occurred</div>;
+  return context.hasError && <div className="error">错误 occurred</div>;
 };

@@ -32,7 +32,7 @@ export const GeneralSettings = () => {
             <Form.Row columnCount={1} rowGap="16px">
               <Input name="title" label="Project Name" />
 
-              <TextArea name="description" label="Description" style={{ minHeight: 128 }} />
+              <TextArea name="description" label="描述" style={{ minHeight: 128 }} />
               {isFF(FF_LSDV_E_297) && (
                 <div className={cn("workspace-placeholder").toClassName()}>
                   <div className={cn("workspace-placeholder").elem("badge-wrapper").toClassName()}>
@@ -110,9 +110,7 @@ export const GeneralSettings = () => {
               <Form.Indicator>
                 <span case="success">Saved!</span>
               </Form.Indicator>
-              <Button type="submit" className="w-[150px]" aria-label="Save general settings">
-                Save
-              </Button>
+              <Button type="submit" className="w-[150px]" aria-label="Save general settings">保存</Button>
             </Form.Actions>
           </Form>
         </div>

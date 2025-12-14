@@ -68,7 +68,7 @@ export const MachineLearningSettings = () => {
     (backend) => {
       const action = backend ? "updateMLBackend" : "addMLBackend";
       const modalProps = {
-        title: `${backend ? "Edit" : "Connect"} Model`,
+        title: `${backend ? "编辑" : "Connect"} Model`,
         style: { width: 760 },
         closeOnClickOutside: false,
         body: (
@@ -98,9 +98,7 @@ export const MachineLearningSettings = () => {
   return (
     <section>
       <div className="w-[42rem]">
-        <Typography variant="headline" size="medium" className="mb-base">
-          Model
-        </Typography>
+        <Typography variant="headline" size="medium" className="mb-base">模型</Typography>
         {loading && <Spinner size={32} />}
         {loaded && backends.length === 0 && (
           <SimpleCard title="" className="bg-primary-background border-primary-border-subtler p-base">
@@ -155,13 +153,13 @@ export const MachineLearningSettings = () => {
               steps:
             </Typography>
             <Typography size="small" className="text-neutral-content-subtler mt-base">
-              1. Navigate to the <i>Data Manager</i>.
+              1. Navigate to the <i>数据 Manager</i>.
             </Typography>
             <Typography size="small" className="text-neutral-content-subtler mt-tighter">
               2. Select the desired tasks.
             </Typography>
             <Typography size="small" className="text-neutral-content-subtler mt-tighter">
-              3. Click on <i>Batch predictions</i> from the <i>Actions</i> menu.
+              3. Click on <i>Batch predictions</i> from the <i>操作</i> menu.
             </Typography>
             <Typography size="small" className="text-neutral-content-subtler mt-base">
               If you want to use the model predictions for prelabeling, please configure this in the{" "}
@@ -200,9 +198,7 @@ export const MachineLearningSettings = () => {
               <Form.Indicator>
                 <span case="success">Saved!</span>
               </Form.Indicator>
-              <Button type="submit" look="primary" className="w-[120px]" aria-label="Save machine learning settings">
-                Save
-              </Button>
+              <Button type="submit" look="primary" className="w-[120px]" aria-label="Save machine learning settings">保存</Button>
             </Form.Actions>
           )}
         </Form>
@@ -211,5 +207,5 @@ export const MachineLearningSettings = () => {
   );
 };
 
-MachineLearningSettings.title = "Model";
+MachineLearningSettings.title = "模型";
 MachineLearningSettings.path = "/ml";

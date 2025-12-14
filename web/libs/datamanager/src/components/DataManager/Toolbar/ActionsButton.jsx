@@ -157,7 +157,7 @@ const invokeAction = (action, destructive, store, formRef) => {
     // Generate dynamic content for destructive actions
     let dialogTitle = title;
     let dialogText = text;
-    let okButtonText = "OK";
+    let okButtonText = "确定";
 
     if (destructive && !title) {
       // Extract object type from action ID and title
@@ -184,7 +184,7 @@ const invokeAction = (action, destructive, store, formRef) => {
 
     if (destructive && !form) {
       // Use standardized warning message for simple delete actions
-      const objectType = dialogTitle ? dialogTitle.replace("Delete selected ", "").replace("?", "") : "items";
+      const objectType = dialogTitle ? dialogTitle.replace("Delete selected ", "").replace("?", "") : "项";
       dialogText = `You are about to delete the selected ${objectType}.\n\nThis can't be undone.`;
     }
 
@@ -228,7 +228,7 @@ export const ActionsButton = injector(
     const actionButtons = actions.map((action) => (
       <ActionButton key={action.id} action={action} parentRef={formRef} store={store} formRef={formRef} />
     ));
-    const recordTypeLabel = isFFLOPSE3 && store.SDK.type === "DE" ? "Record" : "Task";
+    const recordTypeLabel = isFFLOPSE3 && store.SDK.type === "DE" ? "Record" : "任务";
 
     return (
       <Dropdown.Trigger
@@ -256,7 +256,7 @@ export const ActionsButton = injector(
           aria-label="Tasks Actions"
           {...rest}
         >
-          {selectedCount > 0 ? `${selectedCount} ${recordTypeLabel}${selectedCount > 1 ? "s" : ""}` : "Actions"}
+          {selectedCount > 0 ? `${selectedCount} ${recordTypeLabel}${selectedCount > 1 ? "s" : ""}` : "操作"}
         </Button>
       </Dropdown.Trigger>
     );

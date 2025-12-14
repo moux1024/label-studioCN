@@ -1,6 +1,6 @@
 type DateTime = string;
 
-export interface APIAnnotation {
+export interface API标注{
   id: number;
   created_username?: string;
   created_ago: string;
@@ -46,7 +46,7 @@ export interface APIResult {
   value: Record<string, any>;
 }
 
-export interface APITask {
+export interface API任务{
   id: number;
   data: Record<string, any>;
   meta?: any | null;
@@ -64,7 +64,7 @@ export interface APITask {
   predictions?: APIPrediction[];
 }
 
-export interface LSFTaskData {
+export interface LSFTask数据{
   id: number;
   data: any;
   createdAt?: DateTime;
@@ -72,12 +72,12 @@ export interface LSFTaskData {
   predictions: LSFAnnotationData[];
 }
 
-export interface LSFTask extends LSFTaskData {
+export interface LSFTask extends LSFTask数据{
   annotations: LSFAnnotation[];
   predictions: LSFAnnotation[];
 }
 
-export interface LSFAnnotationData {
+export interface LSFAnnotation数据{
   id?: string;
 
   pk: string; // @todo oh, it's complicated
@@ -91,7 +91,7 @@ export interface LSFAnnotationData {
   skipped?: boolean;
 }
 
-export interface LSFAnnotation extends LSFAnnotationData {
+export interface LSFAnnotation extends LSFAnnotation数据{
   // @todo also complicated
   userGenerate?: boolean;
   sentUserGenerate?: boolean;

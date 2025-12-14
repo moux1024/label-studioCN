@@ -28,7 +28,7 @@ export const AggregationCell = ({
   const totalAnnotations = annotations.length;
 
   if (!allResults.length) {
-    return <span className="text-neutral-content-subtler text-xs italic">No data</span>;
+    return <span className="text-neutral-content-subtler text-xs italic">暂无数据</span>;
   }
 
   // Handle labels-type controls (rectanglelabels, polygonlabels, labels, etc.)
@@ -141,7 +141,7 @@ export const AggregationCell = ({
   // Handle rating - calculate average rating across all annotations
   if (control.type === "rating") {
     const ratings = allResults.map((r) => resultValue(r)).filter(Boolean);
-    if (!ratings.length) return <span className="text-neutral-content-subtler text-xs italic">No ratings</span>;
+    if (!ratings.length) return <span className="text-neutral-content-subtler text-xs italic">否 ratings</span>;
 
     const avgRating = ratings.reduce((sum, val) => sum + val, 0) / totalAnnotations;
     return (
@@ -154,7 +154,7 @@ export const AggregationCell = ({
   // Handle number - calculate average number value across all annotations
   if (control.type === "number") {
     const numbers = allResults.map((r) => resultValue(r)).filter((v) => v !== null && v !== undefined);
-    if (!numbers.length) return <span className="text-neutral-content-subtler text-xs italic">No data</span>;
+    if (!numbers.length) return <span className="text-neutral-content-subtler text-xs italic">暂无数据</span>;
 
     const avg = numbers.reduce((sum, val) => sum + Number(val), 0) / totalAnnotations;
     return (

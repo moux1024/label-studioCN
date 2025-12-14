@@ -26,7 +26,7 @@ import RelationStore from "../RelationStore";
 import { UserExtended } from "../UserStore";
 import { LinkingModes } from "./LinkingModes";
 
-const hotkeys = Hotkey("Annotations", "Annotations");
+const hotkeys = Hotkey("标注", "标注");
 
 /**
  * Omit value fields from the object.
@@ -1473,4 +1473,4 @@ const _Annotation = types
     },
   }));
 
-export const Annotation = types.compose("Annotation", LinkingModes, _Annotation);
+export const Annotation = types.compose("标注", LinkingModes, _Annotation);

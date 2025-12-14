@@ -69,7 +69,7 @@ export const Toast: FC<ToastProps> = ({
         {action}
         {closeable && (
           <ToastPrimitive.Close asChild>
-            <div className={clsx(styles.toast__close)} aria-label="Close">
+            <div className={clsx(styles.toast__close)} aria-label="关闭">
               <span aria-hidden>
                 <IconCross />
               </span>

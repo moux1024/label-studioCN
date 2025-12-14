@@ -64,7 +64,7 @@ export const Filters = injector(({ views, currentView, filters }) => {
             />
           ))
         ) : (
-          <div className={cn("filters").elem("empty").toClassName()}>No filters applied</div>
+          <div className={cn("filters").elem("empty").toClassName()}>否 filters applied</div>
         )}
       </div>
       <div className={cn("filters").elem("actions").toClassName()}>
@@ -74,7 +74,7 @@ export const Filters = injector(({ views, currentView, filters }) => {
           onClick={() => currentView.createFilter()}
           leading={<IconPlus className="!h-3 !w-3" />}
         >
-          Add {filters.length ? "Another Filter" : "Filter"}
+          添加{filters.length ? "Another Filter" : "筛选"}
         </Button>
 
         {!sidebarEnabled ? (

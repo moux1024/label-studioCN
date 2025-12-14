@@ -97,7 +97,7 @@ export const ReviewStep = ({ formData, filesPreview, formatSize }: ReviewStepPro
 
       {/* Import Process Section */}
       <div className="bg-primary-background border border-primary-border-subtler rounded-small p-4 mb-8">
-        <h3 className="text-lg font-semibold mb-2">Import Process</h3>
+        <h3 className="text-lg font-semibold mb-2">导入 Process</h3>
         <p>Files will be imported in the background. You can continue working while the import is in progress.</p>
       </div>
     </div>

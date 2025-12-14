@@ -202,9 +202,7 @@ const WebhookForm = ({
           className="ml-auto"
           onClick={onBack}
           aria-label="Cancel webhook edit"
-        >
-          Cancel
-        </Button>
+        >取消</Button>
         <Button
           className={rootClass.elem("save-button")}
           aria-label={webhook === null ? "Add Webhook" : "Save Changes"}

@@ -78,7 +78,7 @@ const ConfigureControl = ({ control, template }) => {
   const refLabels = React.useRef();
   const tagname = control.tagName;
 
-  if (tagname !== "Choices" && !tagname.endsWith("Labels")) return null;
+  if (tagname !== "Choices" && !tagname.endsWith("标签")) return null;
   const palette = Palette();
 
   const onAddLabels = () => {
@@ -107,13 +107,11 @@ const ConfigureControl = ({ control, template }) => {
           onKeyPress={onKeyPress}
           className="lsf-textarea-ls p-2 px-3"
         />
-        <Button type="button" size="small" look="outlined" onClick={onAddLabels} aria-label="Add labels">
-          Add
-        </Button>
+        <Button type="button" size="small" look="outlined" onClick={onAddLabels} aria-label="Add labels">添加</Button>
       </form>
       <div className={configClass.elem("current-labels")}>
         <h3>
-          {tagname === "Choices" ? "Choices" : "Labels"} ({control.children.length})
+          {tagname === "Choices" ? "Choices" : "标签"} ({control.children.length})
         </h3>
         <ul>
           {Array.from(control.children).map((label) => (
@@ -561,7 +559,7 @@ const Configurator = ({
               waiting={waiting}
               aria-label="Save configuration"
             >
-              {waiting ? "Saving..." : "Save"}
+              {waiting ? "Saving..." : "保存"}
             </Button>
             {isFF(FF_UNSAVED_CHANGES) && <UnsavedChanges hasChanges={hasChanges} onSave={onSave} />}
           </Form.Actions>

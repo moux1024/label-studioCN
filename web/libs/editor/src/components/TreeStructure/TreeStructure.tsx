@@ -11,7 +11,7 @@ type ExtendedData = Readonly<{
   path: string[];
 }>;
 
-export interface ExtendedDataWithToggle extends ExtendedData {
+export interface ExtendedDataWithToggle extends Extended数据{
   toggle: (id: string) => void;
 }
 

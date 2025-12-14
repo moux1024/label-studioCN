@@ -10,7 +10,7 @@ type TaskSummaryProps = {
   store: MSTStore["annotationStore"];
 };
 
-interface Annotation {
+interface 标注{
   id: string | number;
   type: "annotation" | "prediction";
 }
@@ -78,7 +78,7 @@ const TaskSummary = ({ annotations: all, store: annotationStore }: TaskSummaryPr
         ]
       : []),
     {
-      title: "Annotations",
+      title: "标注",
       value: annotations.filter((a) => a.type === "annotation").length,
       info: "Number of submitted annotations. Table shows only submitted results, not current drafts.",
     },
@@ -92,7 +92,7 @@ const TaskSummary = ({ annotations: all, store: annotationStore }: TaskSummaryPr
   return (
     <div className="p-6">
       <div className="mb-base">
-        <h2 className="mb-base text-headline-small font-semibold text-neutral-content">Task Summary</h2>
+        <h2 className="mb-base text-headline-small font-semibold text-neutral-content">任务 Summary</h2>
         <NumbersSummary values={values} />
       </div>
       <div className="mb-relaxed">
@@ -104,7 +104,7 @@ const TaskSummary = ({ annotations: all, store: annotationStore }: TaskSummaryPr
         />
       </div>
       <div className="mb-relaxed">
-        <h2 className="mb-base text-headline-small font-semibold text-neutral-content">Task Data</h2>
+        <h2 className="mb-base text-headline-small font-semibold text-neutral-content">任务 Data</h2>
         <DataSummary data_types={dataTypes} />
       </div>
     </div>

@@ -76,23 +76,23 @@ module.exports = {
 
   enableSetting(settingName) {
     I.say("Attempting to open settings menu");
-    I.click("[aria-label=Settings]");
-    I.see("Settings");
+    I.click("[aria-label=设置]");
+    I.see("设置");
     I.say("Attempt to enable setting");
     I.click(settingName);
     I.seeCheckboxIsChecked(settingName);
-    I.click("[aria-label=Close]");
-    I.dontSee("Settings");
+    I.click("[aria-label=关闭]");
+    I.dontSee("设置");
   },
 
   disableSetting(settingName) {
     I.say("Attempting to open settings menu");
-    I.click("[aria-label=Settings]");
-    I.see("Settings");
+    I.click("[aria-label=设置]");
+    I.see("设置");
     I.say("Attempt to disable setting");
     I.click(settingName);
     I.seeCheckboxIsChecked(settingName);
-    I.click("[aria-label=Close]");
-    I.dontSee("Settings");
+    I.click("[aria-label=关闭]");
+    I.dontSee("设置");
   },
 };

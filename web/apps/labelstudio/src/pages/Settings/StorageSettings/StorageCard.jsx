@@ -45,8 +45,8 @@ export const StorageCard = ({ rootClass, target, storage, onEditStorage, onDelet
           align="right"
           content={
             <Menu size="compact" style={{ width: 110 }}>
-              <Menu.Item onClick={() => onEditStorage(storageData)}>Edit</Menu.Item>
-              <Menu.Item onClick={() => onDeleteStorage(storageData)}>Delete</Menu.Item>
+              <Menu.Item onClick={() => onEditStorage(storageData)}>编辑</Menu.Item>
+              <Menu.Item onClick={() => onDeleteStorage(storageData)}>删除</Menu.Item>
             </Menu>
           }
         >

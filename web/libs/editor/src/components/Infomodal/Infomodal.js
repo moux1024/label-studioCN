@@ -9,19 +9,19 @@ const wrapper = (_type, value, title) => {
   switch (_type) {
     case "error":
       custom.type = Modal.error;
-      custom.title = "Error";
+      custom.title = "错误";
       break;
     case "warning":
       custom.type = Modal.warning;
-      custom.title = "Warning";
+      custom.title = "警告";
       break;
     case "success":
       custom.type = Modal.success;
-      custom.title = "Success";
+      custom.title = "成功";
       break;
     default:
       custom.type = Modal.info;
-      custom.title = "Info";
+      custom.title = "信息";
   }
 
   return custom.type({

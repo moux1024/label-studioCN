@@ -136,7 +136,7 @@ const panelViews = [
   },
   {
     name: "history",
-    title: "History",
+    title: "历史",
     component: panelComponents.history as FC<PanelProps>,
     active: false,
   },
@@ -149,7 +149,7 @@ const panelViews = [
   },
   {
     name: "info",
-    title: "Info",
+    title: "信息",
     component: panelComponents.info as FC<PanelProps>,
     active: true,
   },

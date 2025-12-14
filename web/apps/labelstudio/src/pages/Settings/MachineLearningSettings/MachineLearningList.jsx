@@ -74,13 +74,11 @@ const BackendCard = ({ backend, onStartTrain, onEdit, onDelete, onTestRequest })
             align="right"
             content={
               <Menu size="medium" contextual>
-                <Menu.Item onClick={() => onEdit(backend)}>Edit</Menu.Item>
+                <Menu.Item onClick={() => onEdit(backend)}>编辑</Menu.Item>
                 <Menu.Item onClick={() => onTestRequest(backend)}>Send Test Request</Menu.Item>
                 <Menu.Item onClick={() => onStartTrain(backend)}>Start Training</Menu.Item>
                 <Menu.Divider />
-                <Menu.Item onClick={() => confirmDelete(backend)} isDangerous>
-                  Delete
-                </Menu.Item>
+                <Menu.Item onClick={() => confirmDelete(backend)} isDangerous>删除</Menu.Item>
               </Menu>
             }
           >
@@ -117,7 +115,7 @@ const BackendState = ({ backend }) => {
       <Oneof value={state} className={cn("ml").elem("status-label")}>
         <span case="DI">Disconnected</span>
         <span case="CO">Connected</span>
-        <span case="ER">Error</span>
+        <span case="ER">错误</span>
         <span case="TR">Training</span>
         <span case="PR">Predicting</span>
       </Oneof>

@@ -16,7 +16,7 @@ const Input = ({ label, className, validate, required, skip, labelProps, ghost, 
   );
 
   return label ? (
-    <Label {...(labelProps ?? {})} text={label} required={required}>
+    <Label{...(labelProps ?? {})} text={label} required={required}>
       {input}
     </Label>
   ) : (

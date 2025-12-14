@@ -583,7 +583,7 @@ export const MANAGEMENT_V2 = `
       border: "1px solid #ddd",
       fontWeight: "bold"
     }
-  }, "Type"), /*#__PURE__*/React.createElement("th", {
+  }, "类型"), /*#__PURE__*/React.createElement("th", {
     style: {
       textAlign: "left",
       padding: "8px",
@@ -604,7 +604,7 @@ export const MANAGEMENT_V2 = `
       border: "1px solid #ddd",
       fontWeight: "bold"
     }
-  }, "Action"))), /*#__PURE__*/React.createElement("tbody", null, tags().map(tag => {
+  }, "操作"))), /*#__PURE__*/React.createElement("tbody", null, tags().map(tag => {
     const currentValue = getTagValue(tag.name);
     const isChoices = tag.type === "choices" && tag.options;
     return /*#__PURE__*/React.createElement("tr", {

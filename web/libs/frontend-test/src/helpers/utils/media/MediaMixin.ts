@@ -3,7 +3,7 @@ import type { MediaView, ViewWithMedia } from "./types";
 export function withMedia<T extends new (...args: any[]) => ViewWithMedia>(
   Base: T,
 ): T & (new (...args: any[]) => MediaView) {
-  return class extends Base implements MediaView {
+  return class extends Base implements Media查看{
     _bufferingIndicatorSelector = ".lsf-timeline-controls__buffering";
     get bufferingIndicator() {
       return this.root.get(this._bufferingIndicatorSelector);

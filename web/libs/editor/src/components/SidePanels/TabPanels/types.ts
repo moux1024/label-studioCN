@@ -31,7 +31,7 @@ export interface ViewportSize {
   width: number;
   height: number;
 }
-export interface PanelView {
+export interface Panel查看{
   title: string;
   name: string;
   component: FC<any>;

@@ -46,7 +46,7 @@ export function StateHistoryPopoverContent({ entityType, entityId, isOpen, onClo
               leading={<IconCross />}
               look="string"
               size="small"
-              aria-label="Close"
+              aria-label="关闭"
             />
           )}
         </div>
@@ -57,9 +57,7 @@ export function StateHistoryPopoverContent({ entityType, entityId, isOpen, onClo
         {isLoading && (
           <div className="flex flex-col items-center justify-center py-8 gap-3">
             <IconSync className="w-8 h-8 text-primary-icon animate-spin" />
-            <Typography variant="body" size="small" className="text-neutral-content-subtle">
-              Loading...
-            </Typography>
+            <Typography variant="body" size="small" className="text-neutral-content-subtle">加载中...</Typography>
           </div>
         )}
 
@@ -81,9 +79,7 @@ export function StateHistoryPopoverContent({ entityType, entityId, isOpen, onClo
               size="smaller"
               variant="primary"
               type="button"
-            >
-              Retry
-            </Button>
+            >重试</Button>
           </div>
         )}
 

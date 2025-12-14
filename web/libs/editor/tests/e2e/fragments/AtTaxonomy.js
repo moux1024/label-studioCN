@@ -112,7 +112,7 @@ class Taxonomy {
   }
 
   clickAdd() {
-    I.click(this.locate("button").withText("Add"));
+    I.click(this.locate("button").withText("添加"));
   }
 
   fillNewItem(value) {
@@ -148,7 +148,7 @@ class Taxonomy {
   }
 
   clickDelete() {
-    I.click(locate(".ant-dropdown-menu-item").withText("Delete"));
+    I.click(locate(".ant-dropdown-menu-item").withText("删除"));
   }
 }
 

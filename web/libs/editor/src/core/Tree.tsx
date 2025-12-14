@@ -19,7 +19,7 @@ interface ConfigNode extends ConfigNodeBaseProps {
   value?: string;
 }
 
-interface IAnnotation {
+interface I标注{
   id: string;
   ids: Map<string, IAnyStateTreeNode>;
 }
@@ -74,7 +74,7 @@ function tagIntoObject(node: Element, taskData: Record<string, any>, replaces?: 
       const newReplaces: Record<string, string> = { ...replaces, [indexFlag]: i };
       const view = {
         id: guidGenerator(),
-        tagName: "View",
+        tagName: "查看",
         type: "view",
         children: [...node.children].map((child) => {
           const clonedNode = child.cloneNode(true) as Element;
@@ -88,7 +88,7 @@ function tagIntoObject(node: Element, taskData: Record<string, any>, replaces?: 
       views.push(view);
     }
 
-    data.tagName = "View";
+    data.tagName = "查看";
 
     if (props.mode === "pagination") {
       data.type = "pagedview";
@@ -328,7 +328,7 @@ function extractNames(root: IAnyStateTreeNode) {
   const toNames = new Map<string, IAnyStateTreeNode[]>();
 
   // hacky way to get all the available object tag names
-  const objectTypes = Registry.objectTypes().map((type) => type.name.replace("Model", "").toLowerCase());
+  const objectTypes = Registry.objectTypes().map((type) => type.name.replace("模型", "").toLowerCase());
 
   traverseTree(root, (node) => {
     if (node.name) {

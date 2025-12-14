@@ -21,7 +21,7 @@ export const ImageCell = (column) => {
       {...imgDefaultProps}
       key={imgSrc}
       src={imgSrc}
-      alt="Data"
+      alt="数据"
       style={{
         maxHeight: "100%",
         maxWidth: "100px",

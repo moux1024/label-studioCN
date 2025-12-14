@@ -15,7 +15,7 @@ export const TokenSettingsModal = ({
 }) => {
   const settings = useAtomValue(settingsAtom);
   if (!settings.isSuccess || settings.isError || "error" in settings.data) {
-    return <div>Error loading settings.</div>;
+    return <div>错误 loading settings.</div>;
   }
   return (
     <TokenSettingsModalView

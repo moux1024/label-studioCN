@@ -3,7 +3,7 @@ const config = `
   <HyperTextLabels name="ner" toName="text">
     <Label value="Person"></Label>
     <Label value="Organization"></Label>
-    <Label value="Date"></Label>
+    <Label value="日期"></Label>
   </HyperTextLabels>
   <HyperText name="text" value="$text"></HyperText>
 </View>
@@ -30,7 +30,7 @@ const result = [
         end: 105,
       },
       text: "Vincent: Look, Mr. Wolfe",
-      hypertextlabels: ["Date"],
+      hypertextlabels: ["日期"],
     },
   },
   {
@@ -87,7 +87,7 @@ const result = [
         end: 121,
       },
       text: "appreciated.\\n\\nVincent: Look, Mr. Wolfe, I respect you.",
-      hypertextlabels: ["Date"],
+      hypertextlabels: ["日期"],
     },
   },
 ];

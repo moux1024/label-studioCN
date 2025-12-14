@@ -365,7 +365,7 @@ const Model = types
     },
 
     /**
-     * Load items from `apiUrl` and set them indirectly to `items` (via `_items`)
+     * Load items from `apiUrl` and set them indirectly to `项` (via `_items`)
      * @param {string[]} path to load nested items by this path
      */
     loadItems: flow(function* (path) {

@@ -28,7 +28,7 @@ import Base from "./Base";
  * @example
  * <!-- Example data for List tag -->
  * {
- *   "items": [
+ *   "项": [
  *     { "id": "blog", "title": "10 tips to write a better function", "body": "There is nothing worse than being left in the lurch when it comes to writing a function!" },
  *     { "id": "mdn", "title": "Arrow function expressions", "body": "An arrow function expression is a compact alternative to a traditional function" },
  *     { "id": "wiki", "title": "Arrow (computer science)", "body": "In computer science, arrows or bolts are a type class..." }
@@ -37,7 +37,7 @@ import Base from "./Base";
  * @example
  * <!-- Example data for List tag -->
  * {
- *   "items": [
+ *   "项": [
  *      { "id": "blog", "title": "Image 1", "html": "<img src='http://example.com/1.jpg'>" },
  *      { "id": "mdn", "title": "Image 2", "html": "<img src='http://example.com/2.jpg'>" }
  *    ]

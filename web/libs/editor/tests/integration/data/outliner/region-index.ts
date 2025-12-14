@@ -77,13 +77,13 @@ export const panelState = {
       panelViews: [
         {
           name: "info",
-          title: "Info",
+          title: "信息",
           component: { isMobxInjector: true, wrappedComponent: { compare: null } },
           active: true,
         },
         {
           name: "history",
-          title: "History",
+          title: "历史",
           component: { isMobxInjector: true, wrappedComponent: { compare: null } },
           active: false,
         },

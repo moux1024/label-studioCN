@@ -71,11 +71,11 @@ export const CurrentTask = observer(({ store }) => {
           {historyEnabled &&
             (isFF(FF_TASK_COUNT_FIX) ? (
               <div className={cn("current-task").elem("task-count").toClassName()}>
-                {store.queuePosition} of {store.queueTotal}
+                {store.queuePosition} 共{store.queueTotal}
               </div>
             ) : (
               <div className={cn("current-task").elem("task-count").toClassName()}>
-                {currentIndex} of {store.taskHistory.length}
+                {currentIndex} 共{store.taskHistory.length}
               </div>
             ))}
         </div>

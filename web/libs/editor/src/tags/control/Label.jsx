@@ -19,7 +19,7 @@ import { parseValue } from "../../utils/data";
 import { sanitizeHtml } from "../../utils/html";
 
 /**
- * The `Label` tag represents a single label. Use with the `Labels` tag, including `BrushLabels`, `EllipseLabels`, `HyperTextLabels`, `KeyPointLabels`, and other `Labels` tags to specify the value of a specific label.
+ * The `标签` tag represents a single label. Use with the `标签` tag, including `BrushLabels`, `EllipseLabels`, `HyperTextLabels`, `KeyPointLabels`, and other `标签` tags to specify the value of a specific label.
  *
  * @example
  * <!--Basic named entity recognition labeling configuration for text-->
@@ -74,7 +74,7 @@ const Model = types
     _value: types.optional(types.string, ""),
     parentTypes: types.late(() =>
       Types.tagsTypes([
-        "Labels",
+        "标签",
         "EllipseLabels",
         "RectangleLabels",
         "PolygonLabels",
@@ -86,7 +86,7 @@ const Model = types
         "ParagraphLabels",
         "BitmaskLabels",
         "VectorLabels",
-        ...Registry.customTags.map((t) => t.tag).filter((tag) => tag.endsWith("Labels")),
+        ...Registry.customTags.map((t) => t.tag).filter((tag) => tag.endsWith("标签")),
       ]),
     ),
   })

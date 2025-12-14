@@ -8,8 +8,8 @@ module.exports = {
   LAYOUT_SETTINGS: {
     VERTICAL_LAYOUT: "Move sidepanel to the bottom",
   },
-  _openButtonLocator: locate('button[aria-label="Settings"]'),
-  _closeButtonLocator: locate('button[aria-label="Close"]'),
+  _openButtonLocator: locate('button[aria-label="设置"]'),
+  _closeButtonLocator: locate('button[aria-label="关闭"]'),
   _modalLocator: locate(".ant-modal"),
   _tabLocator: locate(".ant-tabs-tab"),
   _activeTabLocator: locate(".ant-tabs-tab-active"),

@@ -22,35 +22,35 @@ import {
 
 const resources = [
   {
-    title: "Documentation",
+    title: "文档",
     url: "https://labelstud.io/guide/",
   },
   {
-    title: "API Documentation",
+    title: "API 文档",
     url: "https://api.labelstud.io/api-reference/introduction/getting-started",
   },
   {
-    title: "Release Notes",
+    title: "发布说明",
     url: "https://labelstud.io/learn/categories/release-notes/",
   },
   {
-    title: "LabelStud.io Blog",
+    title: "LabelStud.io 博客",
     url: "https://labelstud.io/blog/",
   },
   {
-    title: "Slack Community",
+    title: "Slack 社区",
     url: "https://slack.labelstud.io",
   },
 ];
 
 const actions = [
   {
-    title: "Create Project",
+    title: "创建项目",
     icon: IconFolderAdd,
     type: "createProject",
   },
   {
-    title: "Invite Members",
+    title: "邀请成员",
     icon: IconUserAdd,
     type: "inviteMembers",
   },
@@ -68,9 +68,7 @@ export const HomePage: Page = () => {
   const sortedProjects = useAtomValue(sortedProjectsAtom);
   const visitedIds = useAtomValue(visitedIdsAtom);
 
-  useUpdatePageTitle("Home");
-
-  // Fetch regular projects
+  useUpdatePageTitle("首页");
   const { data, isFetching, isSuccess, isError } = useQuery({
     queryKey: ["projects", { page_size: PROJECTS_TO_SHOW }],
     async queryFn() {
@@ -135,12 +133,8 @@ export const HomePage: Page = () => {
       <div className="grid grid-cols-[minmax(0,1fr)_450px] gap-6">
         <section className="flex flex-col gap-6">
           <div className="flex flex-col gap-1">
-            <Typography variant="headline" size="small">
-              Welcome 👋
-            </Typography>
-            <Typography size="small" className="text-neutral-content-subtler">
-              Let's get you started.
-            </Typography>
+            <Typography variant="headline" size="small">欢迎 👋</Typography>
+            <Typography size="small" className="text-neutral-content-subtler">让我们开始吧。</Typography>
           </div>
           <div className="flex justify-start gap-4">
             {actions.map((action) => {
@@ -163,10 +157,8 @@ export const HomePage: Page = () => {
             title={
               data && data?.count > 0 ? (
                 <>
-                  Recent Projects{" "}
-                  <a href="/projects" className="text-lg font-normal hover:underline">
-                    View All
-                  </a>
+                  最近项目{" "}
+                  <a href="/projects" className="text-lg font-normal hover:underline">查看全部</a>
                 </>
               ) : null
             }
@@ -176,8 +168,8 @@ export const HomePage: Page = () => {
                 <Spinner />
               </div>
             ) : isError ? (
-              <div className="h-64 flex justify-center items-center">can't load projects</div>
-            ) : isSuccess && data && sortedProjects.length === 0 ? (
+              <div className="h-64 flex justify-center items-center">无法加载项目</div>
+            ) : isSuccess && data && data.results.length === 0 ? (
               <div className="flex flex-col justify-center items-center border border-primary-border-subtle bg-primary-emphasis-subtle rounded-lg h-64">
                 <div
                   className={
@@ -186,15 +178,9 @@ export const HomePage: Page = () => {
                 >
                   <IconFolderOpen />
                 </div>
-                <Typography variant="headline" size="small">
-                  Create your first project
-                </Typography>
-                <Typography size="small" className="text-neutral-content-subtler">
-                  Import your data and set up the labeling interface to start annotating
-                </Typography>
-                <Button className="mt-4" onClick={() => setModalIsOpen(true)} aria-label="Create new project">
-                  Create Project
-                </Button>
+                <Typography variant="headline" size="small">创建您的第一个项目</Typography>
+                <Typography size="small" className="text-neutral-content-subtler">导入您的数据并设置标注界面以开始标注</Typography>
+                <Button className="mt-4" onClick={() => setCreationDialogOpen(true)} aria-label="创建新项目">创建项目</Button>
               </div>
             ) : isSuccess && data && sortedProjects.length > 0 ? (
               <div className="flex flex-col gap-1">
@@ -207,7 +193,7 @@ export const HomePage: Page = () => {
         </section>
         <section className="flex flex-col gap-6">
           <HeidiTips collection="projectSettings" />
-          <SimpleCard title="Resources" description="Learn, explore and get help" data-testid="resources-card">
+          <SimpleCard title="资源" description="学习、探索和获取帮助" data-testid="resources-card">
             <ul>
               {resources.map((link) => {
                 return (
@@ -228,7 +214,7 @@ export const HomePage: Page = () => {
           </SimpleCard>
           <div className="flex gap-2 items-center">
             <IconHumanSignal />
-            <span className="text-neutral-content-subtle">Label Studio Version: Community</span>
+            <span className="text-neutral-content-subtle">标签 Studio Version: Community</span>
           </div>
         </section>
       </div>
@@ -238,7 +224,7 @@ export const HomePage: Page = () => {
   );
 };
 
-HomePage.title = "Home";
+HomePage.title = "首页";
 HomePage.path = "/";
 HomePage.exact = true;
 
@@ -268,7 +254,7 @@ function ProjectSimpleCard({
             <span className="text-neutral-content truncate">{project.title}</span>
           </Tooltip>
           <div className="text-neutral-content-subtler text-sm">
-            {finished} of {total} Tasks ({total > 0 ? Math.round((finished / total) * 100) : 0}%)
+            {finished} 共{total} Tasks ({total > 0 ? Math.round((finished / total) * 100) : 0}%)
           </div>
         </div>
         <div className="bg-neutral-surface rounded-full overflow-hidden w-full h-2 shadow-neutral-border-subtle shadow-border-1">

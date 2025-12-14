@@ -38,7 +38,7 @@ const ActionDialog = types.model("ActionDialog", {
 const isFFLOPSE3 = isFF(FF_LOPS_E_3);
 
 export const Action = types
-  .model("Action", {
+  .model("操作", {
     id: StringOrNumberID,
     dialog: types.maybeNull(ActionDialog),
     order: types.integer,

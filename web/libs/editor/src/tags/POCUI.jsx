@@ -309,7 +309,7 @@ export const POCUI = ({
   };
 
   if (!data || (tableData.headers.length === 0 && tableData.rows.length === 0)) {
-    return <div>No CSV data to display or data is still loading.</div>;
+    return <div>否 CSV data to display or data is still loading.</div>;
   }
 
   return (

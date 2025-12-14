@@ -10,7 +10,7 @@ export interface ApiCallOptions {
   body?: FormData | URLSearchParams | Record<string, unknown>;
 }
 
-export interface FormattedError {
+export interface FormattedError{
   title: string;
   message: string;
   stacktrace?: string;

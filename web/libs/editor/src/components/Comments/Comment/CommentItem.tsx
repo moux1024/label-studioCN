@@ -79,7 +79,7 @@ export const CommentItem: FC<CommentItemProps> = observer(
     const currentUser = window.APP_SETTINGS?.user;
     const isCreator = currentUser?.id === createdBy.id;
     const infoIsHidden = comment.commentsStore?.store?.hasInterface("annotations:hide-info");
-    const hiddenUser = infoIsHidden ? { email: isCreator ? "Me" : "User" } : null;
+    const hiddenUser = infoIsHidden ? { email: isCreator ? "Me" : "用户" } : null;
     const [text, setText] = useState(initialText);
 
     const [linkingComment, setLinkingComment] = useState();
@@ -209,7 +209,7 @@ export const CommentItem: FC<CommentItemProps> = observer(
               </>
             ) : isConfirmDelete ? (
               <div className={cn("comment-item").elem("confirmForm").toClassName()}>
-                <div className={cn("comment-item").elem("question").toClassName()}>Are you sure?</div>
+                <div className={cn("comment-item").elem("question").toClassName()}>确定吗？</div>
                 <div className={cn("comment-item").elem("controls").toClassName()}>
                   <Button
                     onClick={() => deleteComment()}
@@ -217,12 +217,8 @@ export const CommentItem: FC<CommentItemProps> = observer(
                     look="danger"
                     autoFocus
                     aria-label="Delete comment"
-                  >
-                    Yes
-                  </Button>
-                  <Button onClick={() => setConfirmMode(false)} size="small" aria-label="Cancel delete">
-                    No
-                  </Button>
+                  >是</Button>
+                  <Button onClick={() => setConfirmMode(false)} size="small" aria-label="Cancel delete">否</Button>
                 </div>
               </div>
             ) : (
@@ -268,7 +264,7 @@ export const CommentItem: FC<CommentItemProps> = observer(
                             }
                           }}
                         >
-                          {isEditMode ? "Cancel edit" : "Edit"}
+                          {isEditMode ? "Cancel edit" : "编辑"}
                         </Menu.Item>
                         <Menu.Item onClick={toggleLink}>{regionRef?.region ? "Unlink" : "Link to..."}</Menu.Item>
                         {!isConfirmDelete && (
@@ -276,9 +272,7 @@ export const CommentItem: FC<CommentItemProps> = observer(
                             onClick={() => {
                               setConfirmMode(true);
                             }}
-                          >
-                            Delete
-                          </Menu.Item>
+                          >删除</Menu.Item>
                         )}
                       </>
                     )}

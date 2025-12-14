@@ -359,14 +359,12 @@ export const Select = forwardRef(
         </PopoverTrigger>
         <PopoverContent align="start" data-testid="select-popup" className={contentClassName}>
           {isLoading ? (
-            <span className={styles.selectLoading} tabIndex={-1}>
-              Loading...
-            </span>
+            <span className={styles.selectLoading} tabIndex={-1}>加载中...</span>
           ) : (
             <Command shouldFilter={false}>
               {searchable && (
                 <CommandInput
-                  placeholder={searchPlaceholder ?? "Search"}
+                  placeholder={searchPlaceholder ?? "搜索"}
                   onChangeCapture={onSearchInputHandler}
                   data-testid="select-search-field"
                   autoFocus
@@ -550,4 +548,4 @@ const Option = ({
   );
 };
 
-Select.displayName = "Select";
+Select.displayName = "选择";

@@ -28,7 +28,7 @@ export const AnnotationSettings = () => {
   return (
     <div className={cn("annotation-settings").toClassName()}>
       <div className={cn("annotation-settings").elem("wrapper").toClassName()}>
-        <h1>Annotation Settings</h1>
+        <h1>标注 Settings</h1>
         <div className={cn("settings-wrapper").toClassName()}>
           <Form
             ref={formRef}
@@ -74,9 +74,7 @@ export const AnnotationSettings = () => {
               <Form.Indicator>
                 <span case="success">Saved!</span>
               </Form.Indicator>
-              <Button type="submit" look="primary" className="w-[150px]" aria-label="Save annotation settings">
-                Save
-              </Button>
+              <Button type="submit" look="primary" className="w-[150px]" aria-label="Save annotation settings">保存</Button>
             </Form.Actions>
           </Form>
         </div>
@@ -85,5 +83,5 @@ export const AnnotationSettings = () => {
   );
 };
 
-AnnotationSettings.title = "Annotation";
+AnnotationSettings.title = "标注";
 AnnotationSettings.path = "/annotation";

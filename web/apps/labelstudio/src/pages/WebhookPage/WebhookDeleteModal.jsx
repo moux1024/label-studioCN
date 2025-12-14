@@ -6,7 +6,7 @@ import { cn } from "../../utils/bem";
 
 export const WebhookDeleteModal = ({ onDelete }) => {
   return modal({
-    title: "Delete",
+    title: "删除",
     body: () => {
       const ctrl = useModalControls();
       const rootClass = cn("webhook-delete-modal");
@@ -29,9 +29,7 @@ export const WebhookDeleteModal = ({ onDelete }) => {
               ctrl.hide();
             }}
             aria-label="Cancel webhook deletion"
-          >
-            Cancel
-          </Button>
+          >取消</Button>
           <Button
             variant="negative"
             onClick={async () => {

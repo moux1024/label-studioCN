@@ -41,9 +41,7 @@ const ProjectName = ({ name, setName, onSaveName, onSubmit, error, description, 
         {error && <span className="-mt-1 text-negative-content">{error}</span>}
       </div>
       <div className="w-full flex flex-col gap-2">
-        <label className="w-full" htmlFor="project_description">
-          Description
-        </label>
+        <label className="w-full" htmlFor="project_description">描述</label>
         <TextArea
           name="description"
           id="project_description"
@@ -117,8 +115,8 @@ export const CreateProject = ({ onClose }) => {
   const rootClass = cn("create-project");
   const tabClass = rootClass.elem("tab");
   const steps = {
-    name: <span className={tabClass.mod({ disabled: !!error })}>Project Name</span>,
-    import: <span className={tabClass.mod({ disabled: uploadDisabled })}>Data Import</span>,
+    name: <span className={tabClass.mod({ disabled: !!error })}>项目 Name</span>,
+    import: <span className={tabClass.mod({ disabled: uploadDisabled })}>数据 Import</span>,
     config: "Labeling Setup",
   };
 
@@ -200,7 +198,7 @@ export const CreateProject = ({ onClose }) => {
     <Modal onHide={onDelete} closeOnClickOutside={false} allowToInterceptEscape fullscreen visible bare>
       <div className={rootClass}>
         <Modal.Header>
-          <h1>Create Project</h1>
+          <h1>创建 Project</h1>
           <ToggleItems items={steps} active={step} onSelect={setStep} />
 
           <Space>
@@ -210,18 +208,14 @@ export const CreateProject = ({ onClose }) => {
               onClick={onDelete}
               waiting={waiting}
               aria-label="Cancel project creation"
-            >
-              Cancel
-            </Button>
+            >取消</Button>
             <Button
               look="primary"
               onClick={onCreate}
               waiting={waiting || uploading}
               waitingClickable={false}
               disabled={!project || uploadDisabled || error}
-            >
-              Save
-            </Button>
+            >保存</Button>
           </Space>
         </Modal.Header>
         <ProjectName

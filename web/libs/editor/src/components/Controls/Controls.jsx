@@ -32,7 +32,7 @@ export default inject("store")(
     const updateButtonClassName = cn("update-btn").toClassName();
 
     if (store.task) {
-      taskInformation = <h4 className={`${styles.task} ${taskInfoClassName}`}>Task ID: {store.task.id}</h4>;
+      taskInformation = <h4 className={`${styles.task} ${taskInfoClassName}`}>任务 ID: {store.task.id}</h4>;
     }
 
     /**
@@ -83,7 +83,7 @@ export default inject("store")(
               tooltip={skipTooltip}
               className={`${styles.skip} ${skipButtonClassName}`}
             >
-              Skip {buttons.skip}
+              跳过{buttons.skip}
             </Button>
           </>
         );
@@ -99,7 +99,7 @@ export default inject("store")(
             tooltip="Save results: [ Ctrl+Enter ]"
             className={`${styles.submit} ${submitButtonClassName}`}
           >
-            Submit {buttons.submit}
+            提交{buttons.submit}
           </Button>
         );
       }
@@ -114,7 +114,7 @@ export default inject("store")(
             tooltip="Update this task: [ Alt+Enter ]"
             className={updateButtonClassName}
           >
-            {sentUserGenerate || versions.result ? "Update" : "Submit"} {buttons.update}
+            {sentUserGenerate || versions.result ? "更新" : "提交"} {buttons.update}
           </Button>
         );
       }

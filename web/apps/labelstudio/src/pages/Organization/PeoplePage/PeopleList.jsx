@@ -64,7 +64,7 @@ export const PeopleList = ({ onSelect, selectedUser, defaultSelected }) => {
               <div className={cn("people-list").elem("header").toClassName()}>
                 <div className={cn("people-list").elem("column").mix("avatar").toClassName()} />
                 <div className={cn("people-list").elem("column").mix("email").toClassName()}>Email</div>
-                <div className={cn("people-list").elem("column").mix("name").toClassName()}>Name</div>
+                <div className={cn("people-list").elem("column").mix("name").toClassName()}>名称</div>
                 <div className={cn("people-list").elem("column").mix("last-activity").toClassName()}>Last Activity</div>
               </div>
               <div className={cn("people-list").elem("body").toClassName()}>

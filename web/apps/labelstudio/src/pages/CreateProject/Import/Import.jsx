@@ -396,7 +396,7 @@ export const ImportPage = ({
           leading={<IconUpload />}
           aria-label="Upload file"
         >
-          Upload {files.uploaded.length ? "More " : ""}Files
+          上传{files.uploaded.length ? "More " : ""}Files
         </Button>
         {ff.isActive(ff.FF_SAMPLE_DATASETS) && (
           <SampleDatasetSelect samples={samples} sample={sample} onSampleApplied={onSampleDatasetSelect} />
@@ -642,7 +642,7 @@ export const ImportPage = ({
                         <IconCode className="w-6 h-6 text-primary-icon" />
                       </div>
                       <div className="flex flex-col items-center gap-tighter">
-                        <div className="text-label-small text-neutral-content font-medium">View JSON input format</div>
+                        <div className="text-label-small text-neutral-content font-medium">查看 JSON input format</div>
                         <div className="text-body-small text-neutral-content-subtler text-center">
                           Setup your{" "}
                           <Button

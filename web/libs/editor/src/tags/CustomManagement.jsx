@@ -45,7 +45,7 @@ export const ManagementUI = ({
   if (typeof state === "undefined" || state === null) {
     return (
       <div style={{ padding: "20px", textAlign: "center", color: "#888" }}>
-        <span>Loading data...</span>
+        <span>加载中 data...</span>
       </div>
     );
   }
@@ -372,7 +372,7 @@ export const ManagementUI = ({
       <div style={{ marginTop: "20px" }}>
         <h3 style={{ margin: "0 0 10px 0", fontSize: "16px", fontWeight: "bold" }}>🏷️ Tag Management</h3>
         {!tags || tags().length === 0 ? (
-          <p style={{ color: "#666", fontSize: "12px" }}>No other tags available in this annotation.</p>
+          <p style={{ color: "#666", fontSize: "12px" }}>否 other tags available in this annotation.</p>
         ) : (
           <div>
             <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "12px" }}>
@@ -381,18 +381,14 @@ export const ManagementUI = ({
                   <th style={{ textAlign: "left", padding: "8px", border: "1px solid #ddd", fontWeight: "bold" }}>
                     Tag Name
                   </th>
-                  <th style={{ textAlign: "left", padding: "8px", border: "1px solid #ddd", fontWeight: "bold" }}>
-                    Type
-                  </th>
+                  <th style={{ textAlign: "left", padding: "8px", border: "1px solid #ddd", fontWeight: "bold" }}>类型</th>
                   <th style={{ textAlign: "left", padding: "8px", border: "1px solid #ddd", fontWeight: "bold" }}>
                     Current Value
                   </th>
                   <th style={{ textAlign: "left", padding: "8px", border: "1px solid #ddd", fontWeight: "bold" }}>
                     Set New Value
                   </th>
-                  <th style={{ textAlign: "center", padding: "8px", border: "1px solid #ddd", fontWeight: "bold" }}>
-                    Action
-                  </th>
+                  <th style={{ textAlign: "center", padding: "8px", border: "1px solid #ddd", fontWeight: "bold" }}>操作</th>
                 </tr>
               </thead>
               <tbody>

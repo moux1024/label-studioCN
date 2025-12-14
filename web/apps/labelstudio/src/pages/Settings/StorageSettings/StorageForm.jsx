@@ -122,7 +122,7 @@ export const StorageForm = forwardRef(({ onSubmit, target, project, rootClass, s
             Check Connection
           </Button>
           <Button type="submit" aria-label={storage ? "Save storage settings" : "Add storage"}>
-            {storage ? "Save" : "Add Storage"}
+            {storage ? "保存" : "Add Storage"}
           </Button>
         </div>
       </Form.Actions>
