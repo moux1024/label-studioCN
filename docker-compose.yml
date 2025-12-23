@@ -1,4 +1,18 @@
 services:
+  # Reverse proxy on port 80: / -> 3000, /label/ -> Label Studio
+  nginx-proxy:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - nginx
+    volumes:
+      - ./deploy/proxy-80.conf:/etc/nginx/nginx.conf:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: nginx -g "daemon off;"
+
   nginx:
     build: .
     image: heartexlabs/label-studio:latest
